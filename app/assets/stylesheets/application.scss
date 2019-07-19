@@ -1,0 +1,375 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
+body{
+  font-family: "Noto Sans", sans-serif;
+}
+$main-color: #e9ebee;
+$blue: #1da1f2;
+$image-border: 2px solid #e62951;
+@mixin font-weight($weight){
+  @if $weight == l{
+    font-weight: 100 ;
+  }
+  @else if $weight == m {
+    font-weight: 500;
+  }
+  @else if $weight == b {
+    font-weight: 900;
+  }
+}
+
+@mixin boxShadow(){
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.27);
+  -moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.27);
+  box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.27);
+}
+@mixin border-radius($value){
+  border-radius: $value;
+}
+
+@mixin padding($value){
+  padding: $value;
+}
+%gutter-bot{
+  margin-bottom: 1em;
+}
+body {
+  background-color: $main-color;
+}
+
+.wrapper {
+
+  width: 80%;
+  min-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 20% 55% 20%;
+
+  grid-gap: 1em;
+
+}
+// Global
+.section-title{
+  padding-left: .7em;
+}
+.icon{
+  color: $blue;
+
+}
+
+// btn
+.button{
+  color: rgba(0, 0, 0, 0.87);
+
+  font-size: 0.7rem;
+  min-width: 64px;
+  box-sizing: border-box;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+
+.col-one {
+  h4{
+    margin:0;
+    font-size: .9em;
+  }
+  @include border-radius(1em);
+  @include boxShadow;
+  .sec-one{
+    @include padding(.5em);
+    @extend  %gutter-bot;
+    background: rgba(255, 255, 255, 0.76);
+    height: 20em;
+    overflow-y: auto;
+  }
+  .sec-two, .sec-three ,.sec-four {
+    @include border-radius(.2em);
+    @include padding(.5em);
+    height: 12em;
+    @extend  %gutter-bot;
+    background: rgba(255, 255, 255, 0.76);
+  }
+  .sec-three{
+
+  }
+  .sec-four{
+
+  }
+}
+
+.grey{
+  background-color: grey;
+
+}
+
+// Section 2
+.two{
+
+}
+.posts {
+  padding: 1em;
+  .post-header {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    .user-image {
+      border: $image-border;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      margin-right: 1em;
+
+    }
+    .post-details{
+
+      h4{
+        padding-left: 0;
+      }
+
+    }
+
+
+  }
+  .post-image{
+    margin-bottom: 1em;
+    img{
+      width:100%;
+    }
+
+  }
+  .like-comment{
+
+    i{
+      margin-right: .5rem;
+
+    }
+    span{
+      margin-right: 1em;
+      font-size: 1.2em;
+
+      .love-icon{
+        color: 	#FF1493
+      }
+      .comment-icon{
+        color: $blue;
+      }
+    }
+  }
+  .comments{
+    .user-comment{
+      display: flex;
+      flex-direction: row;
+      .user-image{
+        border: $image-border;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        margin-right: 1em;
+      }
+
+      .user-comment-box{
+        padding: .5em;
+        outline: none;
+        border: 1px solid lightgrey;
+        border-radius: 5rem;
+        font-size: 1.1em;
+        width:80%;
+        margin-right: 20px;
+        &:focus{
+          transition: border .3s ease-in;
+          border: 2px solid $blue;
+        }
+      }
+      .comment-button{
+        width:20%;
+        border:2px solid $blue;
+        border-radius: 2em;
+        font-size: 1em;
+        color: grey;
+        outline: none;
+        background-color: rgba(211, 211, 211, 0);
+        &:hover{
+          transition: background-color .3s ease-in;
+          background-color: $blue;
+          background-color: $blue;
+          color: white;
+          cursor: pointer;
+        }
+        &:focus{
+          transition: width .5s ease-in-out;
+          width: 15%;
+
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.three {
+
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid grey;
+  @include border-radius(.5em);
+  @include boxShadow;
+}
+
+// Section one
+
+.users{
+  padding: 0;
+  .user{
+    margin-bottom: 1em;
+    display: flex;
+    align-content: center;
+    list-style: none;
+    img{
+      border: $image-border;
+      @include  border-radius(50%);
+      width: 30px;
+      height: 30px;
+      margin-right: .8em;
+    }
+    p{
+      font-size: .8em;
+      margin-top: 5px;
+      margin-right: .5em;
+      @include font-weight(m)
+    }
+
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main-content, .main-content-second{
+  @include border-radius(1em);
+  background: rgba(255, 255, 255, 0.83);
+  margin-bottom: 1em;
+  @include boxShadow;
+  h4{
+    margin: auto;
+    padding: .5em;
+  }
+}
+
+
+
+// Status Post
+.status-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  .status-input {
+    width: 90%;
+    font-weight: 200;
+    font-size: 20px;
+    border: none;
+    outline: none;
+  }
+  .status-img {
+    width: 35px;
+    border-radius: 50%;
+  }
+}
+
+.status-footer {
+  padding: 1em;
+
+  .body {
+    padding: 1em;
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    div {
+      background-color: $main-color;
+      border-radius: 20%;
+      padding: .5rem .5rem 0 .5rem;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 10%;
+      img {
+        margin-right: 10%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+
+
+.friends-list{
+  padding: .5em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .friend-image{
+    border: $image-border;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: .5em;
+
+  }
+
+  .friend{
+    h4{
+      font-size: .8em;
+      margin: auto;
+      color: #1da1f2;
+    }
+    small{
+
+      display: block;
+      color: grey;
+
+    }
+    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
+
+  }
+}
