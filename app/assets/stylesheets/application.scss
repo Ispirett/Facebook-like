@@ -17,6 +17,10 @@
 body{
   font-family: "Noto Sans", sans-serif;
 }
+
+
+
+$main-background: #2f2f2f;
 $main-color: #e9ebee;
 $blue: #1da1f2;
 $image-border: 2px solid #e62951;
@@ -130,8 +134,12 @@ body {
 
 }
 .posts {
+  border-radius: .5em;
+  margin-bottom: 2em;
+  background-color: $main-background !important;
   padding: 1em;
   .post-header {
+
     display: flex;
     flex-direction: row;
     align-items: start;
@@ -282,11 +290,15 @@ body {
 
 
 
-
+.main-content{
+  background-color: $main-background;
+}
 
 .main-content, .main-content-second{
+
+  color: white;
   @include border-radius(1em);
-  background: rgba(255, 255, 255, 0.83);
+
   margin-bottom: 1em;
   @include boxShadow;
   h4{
@@ -308,6 +320,8 @@ body {
     font-size: 20px;
     border: none;
     outline: none;
+    border-radius: 1em;
+    padding-left: 1em;
   }
   .status-img {
     width: 35px;

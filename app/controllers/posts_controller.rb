@@ -1,10 +1,10 @@
 class PostsController < ApplicationController
+  # TODO for users and friends. Current user must check if there id is in the friend column of the friendships table
+  # TODO and if the status is pending.
+  # TODO if so the user should see "accept friend request from username"
+  # TODO the user that sent the friend request should see "friend request sent"
   def index
-
-    @user = User.find(current_user.id).friendships.where(status: 'confirmed').select(:friend_id)
-    @friends = @user.map { |user| User.find(user.friend_id)}
-    @friends_post = @friends.map { |u| u.posts}
-    @post = Post.where(user_id:current_user.id) + @friends_post
-
+    @posts = Post.user_and_friends(current_user)
   end
+
 end

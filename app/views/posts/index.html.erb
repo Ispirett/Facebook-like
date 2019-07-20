@@ -79,9 +79,10 @@
 
     <!-- POST SECTION -->
     <div class="main-content-second">
+      <% @posts.each do |post| %>
       <div class="posts">
 
-        <% @posts.each do |post| %>
+
         <div class="post-header">
           <img class="user-image" src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033&dl=1"  alt="user">
           <div class="post-details" >
@@ -95,7 +96,8 @@
         <div class="post-image">
           <img src="https://cdn.homesthetics.net/wp-content/uploads/2014/09/21-Snapshots-of-Abandoned-Places-That-Have-Been-Conquered-by-Nature-homesthetics-4.jpg" alt="Post Image">
         </div>
-        <% end %>
+
+        <!-- Comments -->
         <div class="like-comment">
           <span><i class="fas fa-heartbeat fa-1x love-icon"></i> Love</span>
           <span><i class="far fa-comment fa-1x comment-icon"> </i> Comment</span>
@@ -112,9 +114,13 @@
         </div>
 
       </div>
+      <% end %>
     </div>
 
   </div>
+
+
+
   <div class="three">
     <h4 class="section-title">Friends</h4>
     <div class="friends">

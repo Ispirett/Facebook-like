@@ -17,7 +17,19 @@ require 'faker'
 # User.create(email:"#{Faker::Name.name}@gmail.com", password:12345678)
 # end
 
-5.times do
-  User.first.posts.build(content:Faker::Movies::BackToTheFuture.quote)
-  User.second.posts.build(content:Faker::Movies::BackToTheFuture.quote)
+#posts
+# 5.times do
+#   User.first.posts.build(content:Faker::Movies::BackToTheFuture.quote).save
+#   User.second.posts.build(content:Faker::Movies::BackToTheFuture.quote).save
+# end
+
+ 5.times do
+  User.create( email:Faker::Internet.email, password:12345678)
 end
+
+5.times do
+  count = 4
+  User.first.friends << User.find(count)
+  count +=1
+end
+
