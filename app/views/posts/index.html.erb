@@ -78,7 +78,7 @@
     </section>
 
     <!-- POST SECTION -->
-    <div class="main-content-second">
+    <article class="main-content-second">
       <% @posts.each do |post| %>
       <div class="posts">
 
@@ -102,20 +102,34 @@
           <span><i class="fas fa-heartbeat fa-1x love-icon"></i> Love</span>
           <span><i class="far fa-comment fa-1x comment-icon"> </i> Comment</span>
         </div>
+          <!-- Comments -->
         <div class="comments">
-          <ul>
 
+          <ul class="comments-list">
+            <% post.comments.each do |comment| %>
+            <li class="comment">
+                <img class="comment-user-image" src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
+                <span>(<%= find_user(post.user_id).username %>) <%=  comment.body %></span>
+            </li>
+            <%end %>
           </ul>
+
+          <!-- Post comments -->
+
           <div class="user-comment">
             <img class="user-image" src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-            <input class="user-comment-box" type="text" placeholder="Leave a Comment">
-            <button class="comment-button">Post</button>
+            <%= form_for([post, @comment]) do |f|  %>
+              <%= f.hidden_field :commentable_id , :value => post.id  %>
+              <%= f.text_field :body, class: 'user-comment-box', placeholder:"Leave a Comment" %>
+              <%= f.button 'Comment', class:'comment-button'  %>
+            <% end %>
+
           </div>
         </div>
 
       </div>
       <% end %>
-    </div>
+    </article>
 
   </div>
 

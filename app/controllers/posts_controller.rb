@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   # TODO the user that sent the friend request should see "friend request sent"
   def index
     @posts = Post.user_and_friends(current_user)
+    @comment = Comment.new
+    @post = Post.find(1)
   end
 
 end

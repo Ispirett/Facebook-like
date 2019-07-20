@@ -1,0 +1,11 @@
+
+<div class="user-comment">
+  <img class="user-image" src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
+   <%= form_for([Post.find(post.id), @comment]) do |f|  %>
+    <%= f.text_field :body, class: 'user-comment-box', placeholder:"Leave a Comment" %>
+    <%= f.button 'Comment', class:'comment-button'  %>
+   <% end %>
+
+  <!-- <input class="user-comment-box" type="text" placeholder="Leave a Comment">
+  <button class="comment-button">Post</button> -->
+</div>

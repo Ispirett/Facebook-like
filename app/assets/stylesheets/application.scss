@@ -22,7 +22,7 @@ body{
 
 $main-background: #2f2f2f;
 $main-color: #e9ebee;
-$blue: #1da1f2;
+$blue: rgba(29, 161, 242, 0.36);
 $image-border: 2px solid #e62951;
 @mixin font-weight($weight){
   @if $weight == l{
@@ -168,8 +168,57 @@ body {
     }
 
   }
-  .like-comment{
+  .new_comment{
+    display: flex;
+    width: 100%;
+  }
 
+  .comments-list{
+    border: 1px solid $blue;
+    border-radius: 1em;
+    padding: 1em ;
+
+    li{
+      padding: .3em .3em .3em .5em ;
+      border-radius: .4em;
+      list-style: none;
+
+      .comment-user-image{
+        border-radius: 50%;
+        width: 30px;
+
+      }
+      overflow: auto;
+      &:nth-child(odd){
+
+        text-align: right;
+        span{
+          display: inline-block;
+          width:20em;
+          background-color: rgba(128, 128, 128, 0.2);
+          padding: 1em;
+          border-radius: 1em;
+        }
+
+      }
+      &:nth-child(even){
+        text-align: left;
+        span{
+          display: inline-block;
+          width:20em;
+          background-color: rgba(29, 161, 242, 0.28);
+          padding: 1em;
+          border-radius: 1em;
+        }
+      }
+    }
+
+
+
+  }
+
+  .like-comment{
+    margin-bottom: .5em;
     i{
       margin-right: .5rem;
 
