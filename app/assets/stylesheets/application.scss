@@ -134,6 +134,18 @@ body {
 
 }
 .posts {
+  .post-button{
+    border: 2px solid gray;
+    outline: none;
+    color: #4ca1af;
+    width: 300px;
+    height: 50px;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(228, 228, 233));
+    border-radius: 2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0
+  }
   border-radius: .5em;
   margin-bottom: 2em;
   background-color: $main-background !important;
@@ -161,6 +173,8 @@ body {
 
 
   }
+
+
   .post-image{
     margin-bottom: 1em;
     img{
@@ -168,6 +182,8 @@ body {
     }
 
   }
+
+  // Comments
   .new_comment{
     display: flex;
     width: 100%;
@@ -341,6 +357,11 @@ body {
 
 .main-content{
   background-color: $main-background;
+  .new_post{
+    display: flex !important;
+    width: 100% !important;
+  }
+
 }
 
 .main-content, .main-content-second{
@@ -360,6 +381,19 @@ body {
 
 // Status Post
 .status-body {
+
+  .post-button{
+    border: 2px solid gray;
+    outline: none;
+    color: #4ca1af;
+    width: 8em;
+    height: 50px;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(228, 228, 233));
+    border-radius: 2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    box-shadow: 0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0
+  }
   display: flex;
   justify-content: space-between;
   padding: 1em;
