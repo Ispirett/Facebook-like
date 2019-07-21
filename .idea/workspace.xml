@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e904015-ae81-4237-8308-cc29aaf9cf26" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -41,8 +42,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="112" column="14" lean-forward="true" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
+            <state relative-caret-position="381">
+              <caret line="111" selection-start-line="111" selection-end-line="111" />
+              <folding>
+                <element signature="n#div#1;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="452" column="3" lean-forward="true" selection-start-line="452" selection-start-column="3" selection-end-line="452" selection-end-column="3" />
+            <state relative-caret-position="366">
+              <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -134,7 +138,6 @@
     <findStrings>
       <find>peo</find>
       <find>users</find>
-      <find>sec-one</find>
       <find>email</find>
       <find>section-main</find>
       <find>posts</find>
@@ -148,6 +151,7 @@
       <find>post-header</find>
       <find>like-commen</find>
       <find>comments</find>
+      <find>sec-one</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -426,12 +430,12 @@
       <workItem from="1563605992653" duration="79000" />
       <workItem from="1563606350504" duration="15629000" />
       <workItem from="1563626207264" duration="633000" />
-      <workItem from="1563655784182" duration="17143000" />
+      <workItem from="1563655784182" duration="18668000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68062000" />
+    <option name="totallyTimeSpent" value="69587000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
@@ -824,13 +828,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/comments_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -838,17 +835,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/comments_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="112" column="14" lean-forward="true" selection-start-line="112" selection-start-column="14" selection-end-line="112" selection-end-column="14" />
+        <state relative-caret-position="381">
+          <caret line="111" selection-start-line="111" selection-end-line="111" />
+          <folding>
+            <element signature="n#div#1;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="452" column="3" lean-forward="true" selection-start-line="452" selection-start-column="3" selection-end-line="452" selection-end-column="3" />
+        <state relative-caret-position="366">
+          <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
         </state>
       </provider>
     </entry>
