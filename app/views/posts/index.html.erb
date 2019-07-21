@@ -89,7 +89,7 @@
         <div class="post-header">
           <img class="user-image" src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033&dl=1"  alt="user">
           <div class="post-details" >
-            <h4>Tommy Grind <%= post.user_id  %> </h4>
+            <h4> <%= find_user(post.user_id).username %> </h4>
             <small><%= time_ago_in_words(post.created_at) %> </small>
           </div>
         </div>
@@ -97,16 +97,22 @@
           <p><%= post.content %></p>
         </div>
         <div class="post-image">
+
           <img src="https://cdn.homesthetics.net/wp-content/uploads/2014/09/21-Snapshots-of-Abandoned-Places-That-Have-Been-Conquered-by-Nature-homesthetics-4.jpg" alt="Post Image">
         </div>
 
-        <!-- Comments -->
+        <!-- Comments likes -->
         <div class="like-comment">
-          <span><i class="fas fa-heartbeat fa-1x love-icon"></i> Love</span>
-          <span><i class="far fa-comment fa-1x comment-icon"> </i> Comment</span>
+          <%= form_for [ post, @like] do |f|%>
+           <%= f.hidden_field :post_id, :value => post.id  %>
+          <button class="comment-like-button" name="button" type="submit">(<%= post.likes.count%>) <i class="fas fa-heartbeat fa-1x love-icon"></i> Love</button>
+            <button class="comment-comment-button" id="comment-button"><i class="far fa-comment fa-1x comment-icon"> </i>
+             (<%= post.comments.count %>) Comments</button>
+          <% end %>
+
         </div>
           <!-- Comments -->
-        <div class="comments">
+        <div class="comments" id="comments">
 
           <ul class="comments-list">
             <% post.comments.each do |comment| %>
@@ -200,3 +206,22 @@
 
     </div>
   </div>
+
+  <script>
+    let comments = document.getElementById('comments');
+    let commentButton = document.getElementById('comment-button');
+     commentButton.onclick = (e) =>{
+         e.preventDefault();
+         let display = comments.style.display = 'none';
+         if(display === 'none'){
+            display = comments.style.display = 'block';
+
+         }
+         else if ( display === 'block'){
+            display = comments.style.display = 'none';
+
+         }
+
+     }
+
+  </script>

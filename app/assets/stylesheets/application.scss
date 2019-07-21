@@ -22,6 +22,7 @@ body{
 
 $main-background: #2f2f2f;
 $main-color: #e9ebee;
+$pink: rgba(255, 20, 147, 0.36);
 $blue: rgba(29, 161, 242, 0.36);
 $image-border: 2px solid #e62951;
 @mixin font-weight($weight){
@@ -36,6 +37,9 @@ $image-border: 2px solid #e62951;
   }
 }
 
+@mixin sweet-shadow(){
+  box-shadow: 0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #cfd1e3;
+}
 @mixin boxShadow(){
   -webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.27);
   -moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.27);
@@ -47,6 +51,22 @@ $image-border: 2px solid #e62951;
 
 @mixin padding($value){
   padding: $value;
+}
+
+%social-buttons{
+  border-radius: 1em;
+  background: none;
+  border: none;
+  color: white;
+  outline: none;
+  cursor: pointer;
+
+  &:hover{
+    transition: background-color .3s ease-in-out;
+    background: $pink ;
+  }
+
+
 }
 %gutter-bot{
   margin-bottom: 1em;
@@ -151,11 +171,14 @@ body {
   background-color: $main-background !important;
   padding: 1em;
   .post-header {
-
+      img{
+        @include sweet-shadow();
+      }
     display: flex;
     flex-direction: row;
     align-items: start;
     .user-image {
+      @include sweet-shadow();
       border: $image-border;
       border-radius: 50%;
       width: 50px;
@@ -178,6 +201,7 @@ body {
   .post-image{
     margin-bottom: 1em;
     img{
+      @include sweet-shadow();
       width:100%;
     }
 
@@ -200,6 +224,7 @@ body {
       list-style: none;
 
       .comment-user-image{
+        @include sweet-shadow();
         border-radius: 50%;
         width: 30px;
 
@@ -239,7 +264,28 @@ body {
       margin-right: .5rem;
 
     }
-    span{
+
+    button{
+      @extend %social-buttons;
+      &:focus{
+      background: $blue;
+    }
+    }
+    .comment-comment-button{
+      &:focus{
+        background: $blue;
+
+        .comments{
+          display: block;
+        }
+
+      }
+
+
+
+    }
+
+    span, button{
       margin-right: 1em;
       font-size: 1.2em;
 
@@ -252,10 +298,13 @@ body {
     }
   }
   .comments{
+    display: none;
+
     .user-comment{
       display: flex;
       flex-direction: row;
       .user-image{
+        @include sweet-shadow();
         border: $image-border;
         border-radius: 50%;
         width: 50px;
@@ -301,16 +350,6 @@ body {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 .three {
 
   background: rgba(255, 255, 255, 0.76);
@@ -329,6 +368,7 @@ body {
     align-content: center;
     list-style: none;
     img{
+      @include sweet-shadow;
       border: $image-border;
       @include  border-radius(50%);
       width: 30px;
