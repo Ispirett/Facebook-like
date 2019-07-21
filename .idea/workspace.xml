@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e904015-ae81-4237-8308-cc29aaf9cf26" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/posts/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/posts/index.html.erb" afterDir="false" />
-    </list>
+    <list default="true" id="3e904015-ae81-4237-8308-cc29aaf9cf26" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -72,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
+            <state relative-caret-position="258">
+              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
             </state>
           </provider>
         </entry>
@@ -430,16 +427,15 @@
       <workItem from="1563605992653" duration="79000" />
       <workItem from="1563606350504" duration="15629000" />
       <workItem from="1563626207264" duration="633000" />
-      <workItem from="1563655784182" duration="18668000" />
+      <workItem from="1563655784182" duration="19388000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69587000" />
+    <option name="totallyTimeSpent" value="70307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49912435" visible="true" weight="0.16835018" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -854,8 +850,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="152" column="18" lean-forward="true" selection-start-line="152" selection-start-column="18" selection-end-line="152" selection-end-column="18" />
+        <state relative-caret-position="258">
+          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
         </state>
       </provider>
     </entry>
