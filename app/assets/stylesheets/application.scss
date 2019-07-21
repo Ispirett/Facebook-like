@@ -99,6 +99,9 @@ body {
   color: $blue;
 
 }
+.icon-pink{
+  color: $pink;
+}
 
 // btn
 .button{
@@ -128,19 +131,24 @@ body {
   @include border-radius(1em);
   @include boxShadow;
   .sec-one{
-
+    //background-color: $main-background;
+    //color: white;
     @include padding(.5em);
     @extend  %gutter-bot;
     background: rgba(255, 255, 255, 0.76);
     height: 20em;
     overflow-y: auto;
   }
+  .sec-two{
+    overflow-y: auto;
+  }
   .sec-two, .sec-three ,.sec-four {
+    background: rgba(255, 255, 255, 0.76);
     @include border-radius(.2em);
     @include padding(.5em);
     height: 12em;
     @extend  %gutter-bot;
-    background: rgba(255, 255, 255, 0.76);
+    //background: rgba(255, 255, 255, 0.76);
   }
   .sec-three{
 
@@ -365,8 +373,9 @@ body {
 }
 
 .three {
-
-  background: rgba(255, 255, 255, 0.76);
+  background-color: $main-background;
+  color: white;
+  //background: rgba(255, 255, 255, 0.76);
   border: 1px solid grey;
   @include border-radius(.5em);
   @include boxShadow;

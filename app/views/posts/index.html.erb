@@ -4,36 +4,27 @@
     <section class="sec-one">
       <h4>People you should follow</h4>
       <ul class="users">
+        <% @users.each do |user| %>
         <li class="user">
           <img src="https://i.pinimg.com/736x/44/e6/b7/44e6b77d17b60e89d67f6b2e974b46eb--dream-cast-amazing-eyes.jpg" alt="user">
-          <p>Akiel Helmet</p> <button class="button"> request</button>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-        <li class="user">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIrufSnHpnwRRCF0Rzn7wz6JrKGPx14Ww4mEVzFv00dsOqVY9" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
+          <p><%=user.username %></p> <button class="icon"> <i class="fas fa-user-plus"></i> </button>
 
-        <li class="user">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIrufSnHpnwRRCF0Rzn7wz6JrKGPx14Ww4mEVzFv00dsOqVY9" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
         </li>
-
+        <% end %>
 
       </ul>
-
-
     </section>
 
     <section class=" sec-two">
+      <h4>Awaiting Confirmation </h4>
       <ul class="users">
+        <% @awaiting_confirmation.each do |friend| %>
         <li class="user">
           <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
+          <p><%= find_user(friend.friend_id).username %></p>
+          <p class="icon-pink"><i class="fas fa-user-plus"></i></p>
         </li>
+        <% end %>
         <li class="user">
           <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
           <p>Akiel Helmet</p>
@@ -48,8 +39,8 @@
 
       </ul>
     </section>
-    <div class=" sec-three">Hello</div>
-    <div class=" sec-four">Hello</div>
+
+
 
   </div>
   <!--  col one end -->
@@ -164,13 +155,14 @@
           <%= form_for [ post, @like] do |f|%>
            <%= f.hidden_field :post_id, :value => post.id  %>
           <button class="comment-like-button" name="button" type="submit">(<%= post.likes.count%>) <i class="fas fa-heartbeat fa-1x love-icon"></i> Love</button>
-            <button class="comment-comment-button" id="comment-button"><i class="far fa-comment fa-1x comment-icon"> </i>
+            <button class="comment-comment-button" id="comment-button" type="button" onclick="commentsShow(<%= post.id%> )">
+              <i class="far fa-comment fa-1x comment-icon"> </i>
              (<%= post.comments.count %>) Comments</button>
           <% end %>
 
         </div>
           <!-- Comments -->
-        <div class="comments" id="comments">
+        <div class="comments" id="comments-<%= post.id %>">
 
           <ul class="comments-list">
             <% post.comments.each do |comment| %>
@@ -201,22 +193,24 @@
   </div>
 
 
-
+  <!-- Friends -->
   <div class="three">
     <h4 class="section-title">Friends</h4>
+
     <div class="friends">
+      <% @confirmed.each do |friend| %>
       <div class="friends-list">
         <img  class='friend-image'  src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033&dl=1" alt="image">
         <div class="friend">
           <h4>
-            Kenton Wright
+            <%= find_user(friend.friend_id).username %>
           </h4>
           <small>
-            two days ago
+            <%=  time_ago_in_words(find_user(friend.friend_id).updated_at) %>
           </small>
         </div>
       </div>
-
+      <% end %>
       <div class="friends-list">
         <img  class='friend-image'  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image">
         <div class="friend">
@@ -266,20 +260,17 @@
   </div>
 
   <script>
-    let comments = document.getElementById('comments');
-    let commentButton = document.getElementById('comment-button');
-     commentButton.onclick = (e) =>{
-         e.preventDefault();
-         let display = comments.style.display = 'none';
-         if(display === 'none'){
-            display = comments.style.display = 'block';
+    function commentsShow(postID, e) {
+    let comments = document.getElementById(`comments-${postID}`);
 
-         }
-         else if ( display === 'block'){
-            display = comments.style.display = 'none';
+        if (comments.style.display === 'block'){
+            comments.style.display = 'none';
+        }
+        else{
+            comments.style.display = 'block';
+        }
 
-         }
 
-     }
+    }
 
   </script>

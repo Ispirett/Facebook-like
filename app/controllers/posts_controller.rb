@@ -7,9 +7,10 @@ class PostsController < ApplicationController
   def index
   @posts = Post.user_and_friends(current_user)
   @comment = Comment.new
-  #@post = Post.find(2)
   @post_create = Post.new
   @like = Like.new
+  friend_status(current_user.id)
+  users
   end
 
 
