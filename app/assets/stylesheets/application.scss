@@ -13,9 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 body{
   font-family: "Noto Sans", sans-serif;
+
 }
 
 
@@ -447,7 +452,8 @@ body {
     padding-left: 1em;
   }
   .status-img {
-    width: 35px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
   }
 }
