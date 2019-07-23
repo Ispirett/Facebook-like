@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   resources :posts, only: [:index, :create] do
     resources :comments, only: [:new, :create]
     resources :likes, only:  [:create, :destroy]
-    resource :friendships, only: :create
-
   end
-
+  resource :friendships, only: [:create, :update]
+  patch 'accept_friend/:id', to: 'friendships#accept_friend', as: 'accept_friend'
 end

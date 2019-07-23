@@ -7,8 +7,11 @@
         <% @users.each do |user| %>
         <li class="user">
           <img src="https://i.pinimg.com/736x/44/e6/b7/44e6b77d17b60e89d67f6b2e974b46eb--dream-cast-amazing-eyes.jpg" alt="user">
-          <p><%=user.username %></p> <button class="icon"> <i class="fas fa-user-plus"></i> </button>
-
+          <p><%=user.username %></p>
+          <!--<button class="icon"> <i class="fas fa-user-plus"></i> </button> -->
+          <%= button_to  friendships_path  :friendship => { :friend_id  =>  user.id }  do %>
+            <i class=" icon fas fa-user-plus"></i>
+          <% end %>
         </li>
         <% end %>
 
@@ -16,31 +19,36 @@
     </section>
 
     <section class=" sec-two">
-      <h4>Awaiting Confirmation </h4>
+      <h4>Awaiting your Confirmation </h4>
       <ul class="users">
         <% @awaiting_confirmation.each do |friend| %>
         <li class="user">
           <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-          <p><%= find_user(friend.friend_id).username %></p>
-          <p class="icon-pink"><i class="fas fa-user-plus"></i></p>
+          <p><%= find_user(friend.user_id).username %></p>
+          <span>(<%= friend.status%>)</span>
+          <%= button_to  accept_friend_path(friend.id),  params: {:friendship => { :friend_id  =>  friend.friend_id }}, method: :patch do %>
+            <i class=" icon-pink fas fa-user-plus"></i>
+          <% end %>
         </li>
         <% end %>
-        <li class="user">
-          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-
-        <li class="user">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQivdnScHPNVTnxKwU2dggmOAwzB_kER3XgL1JqVrnbvWIQoDzXA" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-
       </ul>
     </section>
 
+    <section class=" sec-three">
+      <h4>Sent Friend requests </h4>
+      <ul class="users">
+        <% @friend_requests_sent.each do |friend| %>
+          <li class="user">
+            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
+            <p><%= find_user(friend.friend_id).username %></p>
+            <span>(<%= friend.status %>)</span>
+            <p class="icon-pink"><i class="fas fa-user-plus"></i></p>
+          </li>
+        <% end %>
 
+      </ul>
+
+    </section>
 
   </div>
   <!--  col one end -->
@@ -202,16 +210,26 @@
       <div class="friends-list">
         <img  class='friend-image'  src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033&dl=1" alt="image">
         <div class="friend">
+          <% if friend.friend_id == current_user.id  %>
           <h4>
-            <%= find_user(friend.friend_id).username %>
+            <%= find_user(friend.user_id).username %>
           </h4>
-          <small>
-            <%=  time_ago_in_words(find_user(friend.friend_id).updated_at) %>
-          </small>
+            <small>
+              <%=  time_ago_in_words(find_user(friend.user_id).updated_at) %>
+            </small>
+            <%elsif friend.user_id == current_user.id   %>
+            <h4>
+              <%= find_user(friend.friend_id).username %>
+            </h4>
+            <small>
+              <%=  time_ago_in_words(find_user(friend.friend_id).updated_at) %>
+            </small>
+            <%end %>
         </div>
       </div>
       <% end %>
       <div class="friends-list">
+        <%=link_to 'logout', destroy_user_session_path, method: :delete %>
         <img  class='friend-image'  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image">
         <div class="friend">
           <h4>

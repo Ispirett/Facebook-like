@@ -95,7 +95,7 @@ body {
 .section-title{
   padding-left: .7em;
 }
-.icon{
+.icon, .button_to{
   color: $blue;
 
 }
@@ -139,7 +139,7 @@ body {
     height: 20em;
     overflow-y: auto;
   }
-  .sec-two{
+  .sec-two, .sec-three{
     overflow-y: auto;
   }
   .sec-two, .sec-three ,.sec-four {

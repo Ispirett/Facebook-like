@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   @like = Like.new
   friend_status(current_user.id)
   users
+
   end
 
 
