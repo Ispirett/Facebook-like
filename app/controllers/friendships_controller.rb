@@ -13,7 +13,7 @@ class FriendshipsController < ApplicationController
       flash[:success] = "This person is already you friend"
     else
     if @friendship.save
-      flash[:success] = "friend request sent too #{find_user(friend_params).username}"
+      flash[:success] = "friend request sent too #{find_user(@friendship.friend_id).username}"
       redirect_to root_path
     else
       flash[:danger] = "User could not be added #{@friendship.errors.full_messages}"
@@ -29,7 +29,6 @@ class FriendshipsController < ApplicationController
   end
 
   def accept_friend
-    friend_params = params[:friendship][:friend_id]
     @friendship = Friendship.find(params[:id])
     @friendship.update_attribute(:status,'Confirmed')
     flash[:success] = "you now friends#{find_user(@friendship.friend_id)} "
