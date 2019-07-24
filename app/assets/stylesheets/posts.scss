@@ -2,10 +2,90 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.d-block{
-  display: block;
+
+
+header{
+}
+.flash{
+  color: white;
+  .flash-msg{
+    list-style: none;
+  }
+}
+.nav{
+  box-shadow: 0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0;
+  padding-left: 0;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  margin-bottom: 2em;
+  background-color: #2f2f2f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  .nav-links{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-right: 5em;
+    list-style: none;
+    a {
+      color: white;
+      margin-right: 5em;
+      text-decoration: none;
+      &:hover{
+        color: #1da1f2;
+      }
+    }
+  }
 }
 
+
+
+
 .file-field{
+  content: 'Select some files';
+  display: inline-block;
+  background: linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 1em;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  margin-left: 5em;
+}
+
+.file-field:hover {
   background-color: #1da1f2;
+  cursor: pointer;
+}
+
+
+button{
+  background: rgba(255, 255, 255, 0.03);
+  border: none;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12);
+  border-radius: 50%;
+
+}
+button:hover{
+  cursor: pointer;
+}
+
+
+
+.status-footer{
+
+  .body{
+
+    div{
+      background-color: rgba(47, 47, 47, 0.99);
+    }
+  }
 }

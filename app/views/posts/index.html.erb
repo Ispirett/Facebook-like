@@ -9,7 +9,7 @@
           <img src="https://i.pinimg.com/736x/44/e6/b7/44e6b77d17b60e89d67f6b2e974b46eb--dream-cast-amazing-eyes.jpg" alt="user">
           <p><%=user.username %></p>
           <!--<button class="icon"> <i class="fas fa-user-plus"></i> </button> -->
-          <%= button_to  friendships_path  :friendship => { :friend_id  =>  user.id }  do %>
+          <%= button_to  friendships_path  :friendship => { :friend_id  =>  user.id } do %>
             <i class=" icon fas fa-user-plus"></i>
           <% end %>
         </li>
@@ -54,60 +54,6 @@
   <!--  col one end -->
 
 
-  <div class="col-one-hidden">
-    <section class="sec-one">
-      <h4>People you should follow</h4>
-      <ul class="users">
-        <li class="user">
-          <img src="https://i.pinimg.com/736x/44/e6/b7/44e6b77d17b60e89d67f6b2e974b46eb--dream-cast-amazing-eyes.jpg" alt="user">
-          <p>Akiel Helmet</p> <button class="button"> request</button>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-        <li class="user">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIrufSnHpnwRRCF0Rzn7wz6JrKGPx14Ww4mEVzFv00dsOqVY9" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-
-        <li class="user">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgIrufSnHpnwRRCF0Rzn7wz6JrKGPx14Ww4mEVzFv00dsOqVY9" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-
-
-      </ul>
-
-
-    </section>
-
-    <section class=" sec-two">
-      <ul class="users">
-        <li class="user">
-          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-        <li class="user">
-          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-
-        <li class="user">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQivdnScHPNVTnxKwU2dggmOAwzB_kER3XgL1JqVrnbvWIQoDzXA" alt="user">
-          <p>Akiel Helmet</p>
-          <p class="icon"><i class="fas fa-user-plus"></i></p>
-        </li>
-
-      </ul>
-    </section>
-    <div class=" sec-three">Hello</div>
-    <div class=" sec-four">Hello</div>
-
-  </div>
-  <!--  col one end -->
-
 
 
 
@@ -118,11 +64,11 @@
         <img class='status-img' src="https://www.w3schools.com/howto/img_avatar.png" alt="image">
         <%= form_for @post_create do |f| %>
           <%=f.text_field :content , class: 'status-input', placeholder:"Whats on your mind family?" %>
-          <%=f.label :image , class: 'd-block'%>
-          <%=f.file_field :image, class:'d-block file-field'%>
           <%=  f.submit 'submit', class: 'post-button'%>
+          </div>
+          <%= f.file_field :image, class: 'file-field'%>
         <% end %>
-      </div>
+
       <div class="status-footer">
         <div class="body">
           <div> <img class='status-img' src="https://www.w3schools.com/howto/img_avatar.png" alt="image">
@@ -235,7 +181,7 @@
       </div>
       <% end %>
       <div class="friends-list">
-        <%=link_to 'logout', destroy_user_session_path, method: :delete %>
+
         <img  class='friend-image'  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image">
         <div class="friend">
           <h4>
