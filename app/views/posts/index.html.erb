@@ -118,6 +118,8 @@
         <img class='status-img' src="https://www.w3schools.com/howto/img_avatar.png" alt="image">
         <%= form_for @post_create do |f| %>
           <%=f.text_field :content , class: 'status-input', placeholder:"Whats on your mind family?" %>
+          <%=f.label :image , class: 'd-block'%>
+          <%=f.file_field :image, class:'d-block file-field'%>
           <%=  f.submit 'submit', class: 'post-button'%>
         <% end %>
       </div>
@@ -154,8 +156,12 @@
           <p><%= post.content %></p>
         </div>
         <div class="post-image">
+          <% if post.image.attached? %>
+            <%= image_tag post.image %>
 
-          <img src="https://cdn.homesthetics.net/wp-content/uploads/2014/09/21-Snapshots-of-Abandoned-Places-That-Have-Been-Conquered-by-Nature-homesthetics-4.jpg" alt="Post Image">
+          <%else %>
+            <img src="https://cdn.homesthetics.net/wp-content/uploads/2014/09/21-Snapshots-of-Abandoned-Places-That-Have-Been-Conquered-by-Nature-homesthetics-4.jpg" alt="Post Image">
+          <%end  %>
         </div>
 
         <!-- Comments likes -->

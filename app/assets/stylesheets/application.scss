@@ -18,10 +18,6 @@
 
 
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
-body{
-  font-family: "Noto Sans", sans-serif;
-
-}
 
 
 
@@ -41,6 +37,11 @@ $image-border: 2px solid #e62951;
     font-weight: 900;
   }
 }
+body{
+  font-family: "Noto Sans", sans-serif;
+  background-color: $main-color;
+}
+
 
 @mixin sweet-shadow(){
   box-shadow: 0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #cfd1e3;
@@ -76,10 +77,11 @@ $image-border: 2px solid #e62951;
 %gutter-bot{
   margin-bottom: 1em;
 }
-body {
-  background-color: $main-color;
-}
 
+
+.d-block{
+  display: block;
+}
 .wrapper {
 
   width: 80%;
