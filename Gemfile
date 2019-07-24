@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 gem 'devise'
 gem 'omniauth-facebook'
+gem "aws-sdk-s3", require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc1'
 # Use postgresql as the database for Active Record
@@ -29,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faker'
 
 # images
-gem 'carrierwave'
+#gem 'carrierwave'
 gem 'mini_magick'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
