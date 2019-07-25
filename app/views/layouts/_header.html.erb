@@ -1,10 +1,12 @@
 <header>
   <nav class="nav">
     <ul class="nav-links">
+      <% if signed_in? %>
       <li><span>Welcome</span> <%=current_user.username %> </li>
       <li>  <span> Friends </span> (<%=@confirmed.count  %>) </li>
 
       <li>  <span> Posts</span>  on your feed (<%=@posts.count %>)</li>
+        <%end %>
       <input class="nav-search" type="text" placeholder="search friends">
     </ul>
 
