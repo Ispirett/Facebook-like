@@ -19,7 +19,9 @@
 
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 
-
+main{
+  width: 100%;
+}
 
 $main-background: #2f2f2f;
 $main-color: #e9ebee;
@@ -539,3 +541,27 @@ body{
 
   }
 }
+
+
+//@media screen  and (max-width: 1150px){
+//  main{
+//    width: 70%;
+//  }
+//  .two,.three{
+//    section{
+//      width: 100%;
+//    }
+//    article{
+//      width: 80%;
+//    }
+//    div{
+//      width: 80%;
+//    }
+//  }
+//
+//  .wrapper{
+//    display: flex;
+//    flex-direction: column;
+//    grid-gap: 1em;
+//  }
+//}

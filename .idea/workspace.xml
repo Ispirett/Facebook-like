@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e904015-ae81-4237-8308-cc29aaf9cf26" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/layouts/_header.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/facebook-like.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/facebook-like.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.bundle/" />
@@ -39,19 +44,55 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+        <entry file="file://$PROJECT_DIR$/app/models/post.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="490" column="47" selection-start-line="490" selection-start-column="47" selection-end-line="490" selection-end-column="47" />
+            <state relative-caret-position="513">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/friendships_controller.rb">
+        <entry file="file://$PROJECT_DIR$/config/storage.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+            <state relative-caret-position="135">
+              <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/like.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1998">
+              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/friendship.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -66,64 +107,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="261" column="32" lean-forward="true" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
+            <state relative-caret-position="405">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/controllers/friendships_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="360">
+              <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-432">
-              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/layouts/_messages.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state>
+              <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -200,13 +205,14 @@
         <option value="$PROJECT_DIR$/db/migrate/20190723215749_add_omniauth_to_users.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/controllers/friendships_controller.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
-        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_messages.html.erb" />
         <option value="$PROJECT_DIR$/app/views/posts/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/posts.scss" />
+        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.scss" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -248,22 +254,19 @@
             <path>
               <item name="facebook-like" type="b2602c69:ProjectViewProjectNode" />
               <item name="facebook-like" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="facebook-like" type="b2602c69:ProjectViewProjectNode" />
               <item name="facebook-like" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -438,11 +441,12 @@
       <workItem from="1563810369141" duration="3153000" />
       <workItem from="1563814145477" duration="30873000" />
       <workItem from="1563886597471" duration="43658000" />
+      <workItem from="1564068717133" duration="1688000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158970000" />
+    <option name="totallyTimeSpent" value="163990000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -456,7 +460,7 @@
   <component name="ToolWindowManager">
     <frame x="70" y="27" width="1850" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49912435" visible="true" weight="0.1318743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49912435" visible="true" weight="0.21773289" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50087565" side_tool="true" weight="0.24971941" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -465,12 +469,12 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32902467" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32862645" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32902467" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32862645" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.74618095" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.1386604" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -481,220 +485,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190718211125_create_comments.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://Ruby/Like">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Ruby</ID>
-          <OriginalElement>Like</OriginalElement>
-          <nodes>
-            <node x="" y="">ActiveRecord::Delegation::DelegateCache</node>
-            <node x="" y="">ActiveRecord::Sanitization::ClassMethods</node>
-            <node x="" y="">ActiveRecord::DynamicMatchers</node>
-            <node x="" y="">ActiveModel::SecurePassword::ClassMethods</node>
-            <node x="" y="">ActiveModel::SecurePassword</node>
-            <node x="" y="">ActiveRecord::Attributes</node>
-            <node x="" y="">ActiveRecord::ModelSchema</node>
-            <node x="" y="">ActiveRecord::SecureToken</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Scoping::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::TimeZoneConversion</node>
-            <node x="" y="">ActiveRecord::Transactions</node>
-            <node x="" y="">ActiveRecord::Enum</node>
-            <node x="" y="">ActiveRecord::ModelSchema::ClassMethods</node>
-            <node x="" y="">ActiveModel::Validations::Callbacks</node>
-            <node x="" y="">ActiveRecord::AutosaveAssociation::ClassMethods</node>
-            <node x="" y="">Module::Concerning</node>
-            <node x="" y="">ActiveRecord::AttributeMethods</node>
-            <node x="" y="">Like</node>
-            <node x="" y="">ActiveRecord::Aggregations::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeDecorators</node>
-            <node x="" y="">ActiveRecord::Integration</node>
-            <node x="" y="">ActiveRecord::Reflection</node>
-            <node x="" y="">ActiveRecord::Validations::ClassMethods</node>
-            <node x="" y="">ActiveRecord::TouchLater</node>
-            <node x="" y="">ActiveRecord::AttributeAssignment</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Write</node>
-            <node x="" y="">ActiveRecord::Locking::Optimistic</node>
-            <node x="" y="">ActiveModel::Translation</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Serialization</node>
-            <node x="" y="">ActiveSupport::Callbacks::ClassMethods</node>
-            <node x="" y="">ActiveRecord::QueryCache::ClassMethods</node>
-            <node x="" y="">ActiveSupport::DescendantsTracker</node>
-            <node x="" y="">ActiveRecord::SecureToken::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Scoping::Named</node>
-            <node x="" y="">ActiveRecord::Validations</node>
-            <node x="" y="">ActiveRecord::Timestamp</node>
-            <node x="" y="">ActiveRecord::Associations::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeDecorators::ClassMethods</node>
-            <node x="" y="">ActiveRecord::NestedAttributes::ClassMethods</node>
-            <node x="" y="">ActiveModel::Validations::HelperMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Serialization::ClassMethods</node>
-            <node x="" y="">ActiveRecord::NestedAttributes</node>
-            <node x="" y="">PP::ObjectMixin</node>
-            <node x="" y="">ActiveRecord::Store</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::BeforeTypeCast</node>
-            <node x="" y="">ActiveRecord::Suppressor</node>
-            <node x="" y="">ActiveModel::Validations::Callbacks::ClassMethods</node>
-            <node x="" y="">ActiveModel::Callbacks</node>
-            <node x="" y="">FileUtils</node>
-            <node x="" y="">ActiveRecord::Attributes::ClassMethods</node>
-            <node x="" y="">ActiveModel::Conversion</node>
-            <node x="" y="">ActiveRecord::DefineCallbacks::ClassMethods</node>
-            <node x="" y="">ActiveSupport::Tryable</node>
-            <node x="" y="">ActiveModel::Validations::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Explain</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Query</node>
-            <node x="" y="">ActiveModel::Naming</node>
-            <node x="" y="">ActiveRecord::Base</node>
-            <node x="" y="">ActiveRecord::Querying</node>
-            <node x="" y="">ActiveModel::Serializers::JSON</node>
-            <node x="" y="">ActiveRecord::Sanitization</node>
-            <node x="" y="">ActiveRecord::Scoping::Default</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Read</node>
-            <node x="" y="">ActiveRecord::AutosaveAssociation</node>
-            <node x="" y="">Module</node>
-            <node x="" y="">ActiveModel::AttributeMethods::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Store::ClassMethods</node>
-            <node x="" y="">ActiveModel::Conversion::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Integration::ClassMethods</node>
-            <node x="" y="">ActiveRecord::ConnectionHandling</node>
-            <node x="" y="">Rake::DSL</node>
-            <node x="" y="">ActiveRecord::CounterCache</node>
-            <node x="" y="">ApplicationRecord</node>
-            <node x="" y="">ActiveRecord::Scoping</node>
-            <node x="" y="">ActiveRecord::Persistence</node>
-            <node x="" y="">ActiveRecord::Associations</node>
-            <node x="" y="">ActiveRecord::Callbacks</node>
-            <node x="" y="">ActiveRecord::NoTouching::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Translation</node>
-            <node x="" y="">ActiveRecord::Inheritance::ClassMethods</node>
-            <node x="" y="">Rake::FileUtilsExt</node>
-            <node x="" y="">ActiveRecord::NoTouching</node>
-            <node x="" y="">ActiveRecord::Transactions::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Scoping::Default::ClassMethods</node>
-            <node x="" y="">Rails</node>
-            <node x="" y="">ActiveRecord::Core</node>
-            <node x="" y="">ActiveRecord::Core::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Inheritance</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Write::ClassMethods</node>
-            <node x="" y="">ActiveRecord::ReadonlyAttributes</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Dirty</node>
-            <node x="" y="">ActiveRecord::Serialization</node>
-            <node x="" y="">FileUtils::StreamUtils_</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::PrimaryKey</node>
-            <node x="" y="">ActiveRecord::Reflection::ClassMethods</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::Read::ClassMethods</node>
-            <node x="" y="">ActiveModel::ForbiddenAttributesProtection</node>
-            <node x="" y="">ActiveRecord::Locking::Optimistic::ClassMethods</node>
-            <node x="" y="">ActiveRecord::ReadonlyAttributes::ClassMethods</node>
-            <node x="" y="">ActiveRecord::Suppressor::ClassMethods</node>
-            <node x="" y="">ActiveModel::AttributeAssignment</node>
-            <node x="" y="">ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods</node>
-            <node x="" y="">ActiveRecord::CounterCache::ClassMethods</node>
-            <node x="" y="">BasicObject</node>
-            <node x="" y="">ActiveRecord::Timestamp::ClassMethods</node>
-            <node x="" y="">ActiveSupport::Benchmarkable</node>
-            <node x="" y="">ActiveModel::Dirty</node>
-            <node x="" y="">ActiveRecord::Persistence::ClassMethods</node>
-            <node x="" y="">ActiveModel::Validations</node>
-            <node x="" y="">ActiveRecord::Scoping::Named::ClassMethods</node>
-            <node x="" y="">Class</node>
-            <node x="" y="">ActiveRecord::DefineCallbacks</node>
-            <node x="" y="">ActiveSupport::Callbacks</node>
-            <node x="" y="">ActiveRecord::Locking::Pessimistic</node>
-            <node x="" y="">ActiveModel::AttributeMethods</node>
-            <node x="" y="">Object</node>
-            <node x="" y="">ActiveModel::Serialization</node>
-            <node x="" y="">Kernel</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.1842413210245742" x="3825.0" y="505.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://RailsDependency/Post">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>RailsDependency</ID>
-          <OriginalElement>Post</OriginalElement>
-          <nodes>
-            <node x="" y="">Friendship</node>
-            <node x="" y="">User</node>
-            <node x="" y="">Comment</node>
-            <node x="" y="">ApplicationRecord</node>
-            <node x="" y="">Like</node>
-            <node x="" y="">Post</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.9931506849315067" x="307.0" y="379.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Association fields</Category>
-            <Category>Migration fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/logic/font-awesme.js" />
-    <entry file="file://$PROJECT_DIR$/app/javascript/packs/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/seeds.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="35" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/comments/_comment.html.erb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/comments/index.html.erb" />
     <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/like.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
@@ -707,13 +502,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.ruby-version">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
     </entry>
     <entry file="uml://RailsDependency/Like">
       <provider selected="true" editor-type-id="UmlEditorProvider">
@@ -767,31 +555,11 @@
     <entry file="file://$PROJECT_DIR$/app/helpers/likes_helper.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/friendship.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/picture_uploader.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/uploaders/picture_uploader.rb" />
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-74">
-          <caret line="4" column="61" selection-start-line="4" selection-start-column="61" selection-end-line="4" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -809,13 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/omniauth.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/config/omniauth.rb" />
     <entry file="file://$PROJECT_DIR$/config/initializers/application_controller_renderer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -825,8 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/users/omniauth_callbacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="324">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -837,33 +599,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="63" lean-forward="true" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/application.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.rb">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/webpacker.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1701" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/storage.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="18" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="83" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/posts_controller.rb">
@@ -876,6 +617,97 @@
     <entry file="file://$PROJECT_DIR$/config/credentials.yml.enc">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20190723182136_create_active_storage_tables.active_storage.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-432">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/master.key">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/babel.config.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Rakefile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/webpack/development.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/application.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_messages.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/_header.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7101">
+          <caret line="263" column="93" selection-start-line="263" selection-start-column="93" selection-end-line="263" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/bundle">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10933">
+          <caret line="550" column="14" lean-forward="true" selection-start-line="550" selection-start-column="14" selection-end-line="550" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/comment.rb">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/schema.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
@@ -883,20 +715,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20190723182136_create_active_storage_tables.active_storage.rb">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="137">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="261" column="32" lean-forward="true" selection-start-line="261" selection-start-column="32" selection-end-line="261" selection-end-column="32" />
+        <state relative-caret-position="405">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -914,52 +743,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_messages.html.erb">
+    <entry file="file://$PROJECT_DIR$/config/storage.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state relative-caret-position="135">
+          <caret line="11" column="47" lean-forward="true" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/friendship.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/application_record.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/post.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="6" column="56" lean-forward="true" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/like.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/posts/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="-1998">
           <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="490" column="47" selection-start-line="490" selection-start-column="47" selection-end-line="490" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/posts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="23" column="42" lean-forward="true" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-432">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>

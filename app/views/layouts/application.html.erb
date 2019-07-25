@@ -4,6 +4,7 @@
     <title>FacebookLike</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/148da265e3.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,25 +13,7 @@
   <body>
 
   <main>
-    <header>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-
-          <%= render 'layouts/messages' %>
-
-        <ul>
-          <li class="nav-links">
-            <%=link_to 'logout', destroy_user_session_path, method: :delete %>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
+    <%= render 'layouts/header' %>
   <div class="wrapper">
 
 
