@@ -88,7 +88,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="108">
               <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
             </state>
           </provider>
@@ -413,12 +413,12 @@
       <workItem from="1563814145477" duration="30873000" />
       <workItem from="1563886597471" duration="45077000" />
       <workItem from="1563980453664" duration="14657000" />
-      <workItem from="1564000660391" duration="16708000" />
+      <workItem from="1564000660391" duration="17437000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="191754000" />
+    <option name="totallyTimeSpent" value="192483000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,9 +431,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="87" y="93" width="1796" height="981" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49912435" visible="true" weight="0.20543982" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49912435" visible="true" weight="0.20543982" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50087565" side_tool="true" weight="0.24971941" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -446,7 +445,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32902467" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49887767" visible="true" weight="0.2169448" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49887767" visible="true" weight="0.54043645" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50112236" side_tool="true" weight="0.5346651" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -762,7 +761,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/user.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
+        <state relative-caret-position="108">
           <caret line="18" column="37" lean-forward="true" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
         </state>
       </provider>
