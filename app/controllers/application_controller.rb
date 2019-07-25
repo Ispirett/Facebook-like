@@ -3,7 +3,8 @@ class ApplicationController < ActionController::Base
   def users
     user_friends = Friendship.confirmed_friends(current_user.id).distinct.pluck(:friend_id)
     friend_users = Friendship.confirmed_friends(current_user.id).distinct.pluck(:user_id)
-    @users = User.where.not(id:user_friends + friend_users)
+    users_exclude = user_friends + friend_users + [current_user.id]
+    @users = User.where.not(id:users_exclude)
 
   end
 

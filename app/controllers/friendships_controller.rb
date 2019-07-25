@@ -10,7 +10,8 @@ class FriendshipsController < ApplicationController
     @friendship.user_id = current_user.id
 
     if @friendship_exist.exists?
-      flash[:success] = "This person is already your friend"
+      flash[:success] = "This person has already sent you a friend request"
+      redirect_to root_path
     else
     if @friendship.save
       flash[:success] = "friend request sent too #{find_user(@friendship.friend_id).username}"
