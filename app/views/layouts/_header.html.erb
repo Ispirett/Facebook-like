@@ -1,0 +1,19 @@
+<header>
+  <nav class="nav">
+    <ul class="nav-links">
+      <li><span>Welcome</span> <%=current_user.username %> </li>
+      <li>  <span> Friends </span> (<%=@confirmed.count  %>) </li>
+
+      <li>  <span> Posts</span>  on your feed (<%=@posts.count %>)</li>
+      <input class="nav-search" type="text" placeholder="search friends">
+    </ul>
+
+    <%= render 'layouts/messages' %>
+
+    <ul>
+      <li class="nav-links">
+        <%=link_to 'logout', destroy_user_session_path, method: :delete %>
+      </li>
+    </ul>
+  </nav>
+</header>

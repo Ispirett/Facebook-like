@@ -12,24 +12,7 @@
   <body>
 
   <main>
-    <header>
-      <nav class="nav">
-        <ul class="nav-links">
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-          <li><a href="">link</a></li>
-        </ul>
-
-          <%= render 'layouts/messages' %>
-
-        <ul>
-          <li class="nav-links">
-            <%=link_to 'logout', destroy_user_session_path, method: :delete %>
-          </li>
-        </ul>
-      </nav>
-    </header>
+   <%= render 'layouts/header' %>
 
   <div class="wrapper">
 
