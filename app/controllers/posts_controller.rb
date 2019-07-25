@@ -19,8 +19,8 @@ class PostsController < ApplicationController
 
 
   def create
-    @post_create = Post.new(post_params)
-    @post_create.user_id = current_user.id
+    @post_create = current_user.posts.build(post_params)
+
     if @post_create.save
       flash[:success] = 'You post what successfully submmited'
       redirect_to root_path
