@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user
   has_many :comments, as: :commentable, dependent: :destroy
-  has_many :likes , dependent: :destroy
+  has_many :likes, dependent: :destroy
   validates :content, presence: true, length: {maximum: 1500}
   has_one_attached :image
   default_scope -> {order(created_at: :desc)}

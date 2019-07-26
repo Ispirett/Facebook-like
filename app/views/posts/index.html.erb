@@ -1,5 +1,5 @@
 
-
+  <div class="wrapper">
   <div class="col-one">
     <section class="sec-one">
       <h4>People you should follow</h4>
@@ -128,7 +128,8 @@
             <% post.comments.each do |comment| %>
             <li class="comment">
                 <img class="comment-user-image" src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-                <span>(<%= find_user(post.user_id).username %>) <%=  comment.body %></span>
+               <!-- TODO -->
+                <span>(<%= find_user(comment.user_id).username %>) <%=  comment.body %></span>
             </li>
             <%end %>
           </ul>
@@ -228,7 +229,7 @@
 
     </div>
   </div>
-
+  </div>
   <script>
     function commentsShow(postID, e) {
     let comments = document.getElementById(`comments-${postID}`);

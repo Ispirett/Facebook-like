@@ -1,0 +1,109 @@
+//body{
+//  background-image: url("http://wallpapercave.com/wp/4VKVpjo.jpg");
+//  background-size: cover;
+//  text-shadow: 1px 1px #c6c6c6;
+//}
+
+body{
+margin-left: 0;
+  margin-right: 0;
+}
+.form-container{
+
+  margin: 0;
+  left:0;
+  width: 100vw;
+  background-image: url("https://wallup.net/wp-content/uploads/2016/04/10/178641-fantasy_art-Heaven_and_Hell.jpg");
+  background-color: #2f2f2f;
+  background-attachment: fixed;
+  height: 100vh;
+}
+.container{
+
+  border-radius: 2em;
+  padding: 5em;
+  color: white;
+  text-align: center;
+  margin: 2em auto 0 auto;
+  width: 30%;
+
+  a{
+    display: block;
+    color: white;
+
+  }
+
+
+
+  input[type='text'], input[type='password'], input[type='email']{
+    background-color: white !important;
+    border: 1px solid gray;
+    border-radius: 1em;
+    width: 100%;
+    height: 2em;
+
+  }
+
+
+
+  input[type='text']:focus,
+  input[type='password']:focus,
+  input[type='email']:focus,
+  input[type='textarea']:focus
+
+  {
+
+    transition: border .4s ease-in;
+    border: 3px solid #1da1f2;
+    outline: none;
+
+
+  }
+}
+
+
+.button, .facebook{
+  font-weight: bold;
+  text-decoration: none;
+
+  padding: .3em;
+  color: white !important;
+  text-align: center;
+  width: 10em;
+  height: 2em;
+  border-radius: 1em;
+  border: 1px solid grey;
+  background: linear-gradient( to right,  #1da1f2, #2E2F30 );
+
+}
+
+
+.facebook{
+  width: 60%;
+    height: 1em;
+
+}
+li{
+  list-style: none;
+}
+
+label{
+  font-size: 1.5em;
+  font-weight: 800;
+}
+p{
+  color: white;
+}
+
+
+@media screen and (max-width: 800px){
+  .form-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .container{
+    width:100%;
+    margin: 0 auto;
+  }
+
+}

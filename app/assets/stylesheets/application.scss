@@ -19,14 +19,17 @@
 
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 
+<<<<<<< HEAD
 main{
   width: 100%;
 }
+=======
+>>>>>>> master
 
 $main-background: #2f2f2f;
 $main-color: #e9ebee;
 $pink: rgba(255, 20, 147, 0.36);
-$blue: rgba(29, 161, 242, 0.36);
+$blue: rgba(29, 161, 242, 0.2);
 $image-border: 2px solid #e62951;
 @mixin font-weight($weight){
   @if $weight == l{
@@ -42,6 +45,10 @@ $image-border: 2px solid #e62951;
 body{
   font-family: "Noto Sans", sans-serif;
   background-color: $main-color;
+
+  background-image: url("https://wallup.net/wp-content/uploads/2016/04/10/178641-fantasy_art-Heaven_and_Hell.jpg");
+  background-color: #2f2f2f;
+  background-attachment: fixed;
 }
 
 
@@ -101,7 +108,7 @@ body{
   padding-left: .7em;
 }
 .icon, .button_to{
-  color: $blue;
+  color: white;
 
 }
 .icon-pink{
@@ -387,6 +394,16 @@ body{
 .users{
   padding: 0;
   .user{
+    background-image:  linear-gradient( to left , $blue,$main-background);
+
+    border-radius: 1em;
+    color: white;
+
+    p,span{
+
+      font-size: 1em;
+      font-weight: bold;
+    }
     margin-bottom: 1em;
     display: flex;
     align-content: center;

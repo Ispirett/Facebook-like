@@ -1,10 +1,20 @@
 <header>
   <nav class="nav">
     <ul class="nav-links">
+<<<<<<< HEAD
       <li><a href="">link</a></li>
       <li><a href="">link</a></li>
       <li><a href="">link</a></li>
       <li><a href="">link</a></li>
+=======
+      <% if signed_in? %>
+      <li><span>Welcome</span> <%=current_user.username %> </li>
+      <li>  <span> Friends </span> (<%=@confirmed.count  %>) </li>
+
+      <li>  <span> Posts</span>  on your feed (<%=@posts.count %>)</li>
+        <%end %>
+      <input class="nav-search" type="text" placeholder="search friends">
+>>>>>>> master
     </ul>
 
     <%= render 'layouts/messages' %>
@@ -15,4 +25,8 @@
       </li>
     </ul>
   </nav>
+<<<<<<< HEAD
 </header>
+=======
+</header>
+>>>>>>> master

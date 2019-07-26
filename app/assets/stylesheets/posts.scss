@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+$blue: rgba(29, 161, 242, 0.2);
 header{
 }
 .flash{
@@ -28,7 +28,17 @@ header{
     display: flex;
     flex-direction: row;
     color: white;
-    margin-right: 5em;
+
+    li{
+      margin-right: 2em;
+
+      span{
+        font-weight: bold;
+        color: #1da1f2;
+
+      }
+    }
+
     list-style: none;
     a {
       color: white;
@@ -41,6 +51,18 @@ header{
   }
 }
 
+.nav-search{
+  width: 30em !important;
+  border-radius: 1em !important;
+  outline: none !important;
+  font-size: 1em !important;
+  padding-left: 1em !important;
+
+  &:focus{
+    border: 5px solid #1da1f2;
+  }
+
+}
 
 
 
