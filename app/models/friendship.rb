@@ -1,6 +1,7 @@
 class Friendship < ApplicationRecord
   belongs_to :user
   belongs_to :friend, class_name: 'User'
+
   before_create :set_status
   # query  to check if friend ship all ready exits
   scope :friend_requests_sent, -> {where("status = ? ", 'Pending')}
