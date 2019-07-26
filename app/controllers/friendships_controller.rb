@@ -5,11 +5,11 @@ class FriendshipsController < ApplicationController
   # make user is not all so a friend of current user
   def create
     friend_params = params[:friendship][:friend_id]
-    @friendship_exist = Friendship.friendship_exist?(current_user,friend_params)
+    friendship_exist = Friendship.friendship_exist?(current_user.id,friend_params)
     @friendship = Friendship.new(friendship_params)
     @friendship.user_id = current_user.id
 
-    if @friendship_exist.exists?
+    if friendship_exist.exists?
       flash[:success] = "This person has already sent you a friend request"
       redirect_to root_path
     else

@@ -8,7 +8,7 @@ class Friendship < ApplicationRecord
         -> (user) {where('user_id = ? AND status  IN (?) OR friend_id = ? AND status  IN (?) ' ,
                                           user,['Confirmed','Pending'],user, ['Confirmed', 'Pending'])}
   scope :awaiting_response, -> (user) {where("friend_id = ?  AND status = ?",user, 'Pending')}
-  scope :friendship_exist?, -> (user,friend) {where('user_id = ? AND status = ? OR friend_id = ? AND status = ? ' ,
+  scope :friendship_exist?, -> (user,friend) {where('user_id = ? AND status = ? AND friend_id = ? AND status = ? ' ,
                                                                                user,'Pending',friend, 'Pending')}
   scope :not_friends, ->{pluck(:friend_id)}
 
