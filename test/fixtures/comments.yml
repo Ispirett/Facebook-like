@@ -4,10 +4,10 @@ one:
   body: MyText
   commentable_id: 1
   commentable_type: MyString
-  user: one
+  user_id: 1
 
 two:
   body: MyText
   commentable_id: 1
-  commentable_type: MyString
-  user: two
+  commentable_type: Hello
+  user_id: 1

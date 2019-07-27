@@ -2,8 +2,8 @@
 
 one:
   post: one
-  user_id: 1
+  user_id: I
 
 two:
   post: two
-  user_id: 1
+  user_id: I

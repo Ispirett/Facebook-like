@@ -2,6 +2,8 @@
 
 one:
   content: MyString
+  user: I
 
 two:
   content: MyString
+  user: I
