@@ -6,7 +6,7 @@
       <ul class="users">
         <% @users.each do |user| %>
         <li class="user">
-          <img src="https://i.pinimg.com/736x/44/e6/b7/44e6b77d17b60e89d67f6b2e974b46eb--dream-cast-amazing-eyes.jpg" alt="user">
+          <%=user_gravatar(user) %>
           <p><%=user.username %></p>
           <!--<button class="icon"> <i class="fas fa-user-plus"></i> </button> -->
           <%= button_to  friendships_path  :friendship => { :friend_id  =>  user.id } do %>
@@ -39,7 +39,7 @@
       <ul class="users">
         <% @friend_requests_sent.each do |friend| %>
           <li class="user">
-            <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
+           <%= user_gravatar(find_user(friend.friend_id)) %>
             <p><%= find_user(friend.friend_id).username %></p>
             <span>(<%= friend.status %>)</span>
             <p class="icon-pink"><i class="fas fa-user-plus"></i></p>
@@ -56,17 +56,19 @@
 
 
 
-
+  <!-- User section -->
   <div class="two">
     <section class="main-content">
       <h4>Say whats on your mind <%= current_user.username %></h4>
       <div class="status-body">
-        <img class='status-img' src="https://www.w3schools.com/howto/img_avatar.png" alt="image">
+        <%= user_gravatar(current_user, 'status-img') %>
+
         <%= form_for @post_create do |f| %>
           <%=f.text_field :content , class: 'status-input', placeholder:"Whats on your mind family?" %>
           <%=  f.submit 'submit', class: 'post-button'%>
           </div>
           <%= f.file_field :image, class: 'file-field'%>
+          <a class="status-gravatar-link" href="http://gravatar.com/emails" target="_blank">update profile picture</a>
         <% end %>
 
       <div class="status-footer">
@@ -92,12 +94,13 @@
 
 
         <div class="post-header">
-          <img class="user-image" src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033&dl=1"  alt="user">
+          <%= user_gravatar(find_user(post.user_id), 'user-image') %>
           <div class="post-details" >
             <h4> <%= find_user(post.user_id).username %> </h4>
             <small><%= time_ago_in_words(post.created_at) %> </small>
           </div>
         </div>
+
         <div class="post-comment">
           <p><%= post.content %></p>
         </div>
@@ -127,7 +130,7 @@
           <ul class="comments-list">
             <% post.comments.each do |comment| %>
             <li class="comment">
-                <img class="comment-user-image" src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
+                <%= user_gravatar(find_user(comment.user_id), 'comment-user-image') %>
                <!-- TODO -->
                 <span>(<%= find_user(comment.user_id).username %>) <%=  comment.body %></span>
             </li>
@@ -137,7 +140,7 @@
           <!-- Post comments -->
 
           <div class="user-comment">
-            <img class="user-image" src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
+            <%= user_gravatar(current_user, 'user-image') %>
             <%= form_for([post, @comment]) do |f|  %>
               <%= f.hidden_field :commentable_id , :value => post.id  %>
               <%= f.text_field :body, class: 'user-comment-box', placeholder:"Leave a Comment" %>
@@ -161,7 +164,8 @@
     <div class="friends">
       <% @confirmed.each do |friend| %>
       <div class="friends-list">
-        <img  class='friend-image'  src="https://cdnb.artstation.com/p/assets/images/images/001/863/575/large/irakli-nadar-artstation-da.jpg?1453903033&dl=1" alt="image">
+        <%= user_gravatar(find_user(friend.friend_id), 'friend-image') %>
+
         <div class="friend">
           <% if friend.friend_id == current_user.id  %>
           <h4>

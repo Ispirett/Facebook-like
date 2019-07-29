@@ -19,12 +19,7 @@
 
 @import url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
 
-<<<<<<< HEAD
-main{
-  width: 100%;
-}
-=======
->>>>>>> master
+
 
 $main-background: #2f2f2f;
 $main-color: #e9ebee;
@@ -491,49 +486,68 @@ body{
     padding-left: 1em;
   }
   .status-img {
+    @include boxShadow();
+    border: 2px solid rgba(230, 41, 81, 0.87);;
     width: 45px;
     height: 45px;
     border-radius: 50%;
   }
+
 }
+.status-gravatar-link{
+  margin-left: 1em;
+  border-radius: 1em;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.67);
+  color: white;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: .2em 1em .2em 1em;
 
-.status-footer {
-  padding: 1em;
-
-  .body {
-    padding: 1em;
-    border-top: 1px solid grey;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    div {
-      background-color: rgba(62, 62, 62, 0.76);
-      border-radius: 20%;
-      padding: .5rem .5rem 0 .5rem;
-      display: flex;
-      justify-content: space-between;
-      margin-right: 10%;
-      img {
-        margin-right: 10%;
-        width: 30px;
-        height: 30px;
-      }
-    }
+  &:hover{
+    border: 1px solid #B00100;
   }
 }
 
+.status-footer {
+padding: 1em;
+
+.body {
+  padding: 1em;
+  border-top: 1px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  div {
+    background-color: rgba(62, 62, 62, 0.76);
+    border-radius: 20%;
+    padding: .5rem .5rem 0 .5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+    img {
+      margin-right: 10%;
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+}
+
 .friends{
-  height: 25em;
+height: 25em;
 }
 
 
-.friends-list{
+.friends-list {
   padding: .5em;
   margin-bottom: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
-  .friend-image{
+
+  .friend-image {
     border: $image-border;
     border-radius: 50%;
     width: 30px;
@@ -542,43 +556,18 @@ body{
 
   }
 
-  .friend{
-    h4{
+  .friend {
+    h4 {
       font-size: .8em;
       margin: auto;
       color: #1da1f2;
     }
-    small{
+
+    small {
 
       display: block;
       color: grey;
 
     }
-    border-bottom: 1px solid rgba(211, 211, 211, 0.5);
-
   }
 }
-
-
-//@media screen  and (max-width: 1150px){
-//  main{
-//    width: 70%;
-//  }
-//  .two,.three{
-//    section{
-//      width: 100%;
-//    }
-//    article{
-//      width: 80%;
-//    }
-//    div{
-//      width: 80%;
-//    }
-//  }
-//
-//  .wrapper{
-//    display: flex;
-//    flex-direction: column;
-//    grid-gap: 1em;
-//  }
-//}

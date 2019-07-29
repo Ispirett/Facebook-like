@@ -6,8 +6,7 @@ class FriendshipsController < ApplicationController
   def create
     friend_params = params[:friendship][:friend_id]
     friendship_exist = Friendship.friendship_exist?(current_user.id,friend_params)
-    @friendship = Friendship.new(friendship_params)
-    @friendship.user_id = current_user.id
+    @friendship = current_user.friends << find_user(friend_params)
 
     if friendship_exist.exists?
       flash[:success] = "This person has already sent you a friend request"
