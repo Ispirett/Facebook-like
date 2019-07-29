@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-# User.create(email:'i@gmail.com', password:12345678)
-# User.create(email:'n@gmail.com', password:12345678)
+User.create(email:'i@gmail.com', password:12345678)
+User.create(email:'n@gmail.com', password:12345678)
 
 
 require 'faker'
@@ -25,11 +25,5 @@ require 'faker'
 
  5.times do
   User.create( email:Faker::Internet.email, password:12345678)
-end
-
-5.times do
-  count = 4
-  User.first.friends << User.find(count)
-  count +=1
 end
 
