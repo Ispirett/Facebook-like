@@ -1,19 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:params) {{email: 'p@gmail.com',password: 'jdsidsdaifds' }}
-  let(:user) {User.new(params)}
-  let(:user2) {User.new(email: 'g@gmail.com',password: 'jdsidsdaifds' )}
+
+  let(:user) {build(:user)}
+  let(:user2) {build(:user_two)}
 
 
 
-  context "validdations  "do
+  context "validations  "do
     it 'ensures email is present' do
-      user = User.new(params).valid?
-      expect(user).to eq(true)
+      expect(user.valid?).to eq(true)
     end
 
+    it 'ensures user doest save without password and email' do
+      user.email = nil
+      user.password = nil
+      expect(user.valid?).to eq false
+    end
   end
+
   context 'tests  user scopes' do
     before(:each) do
       user.save
