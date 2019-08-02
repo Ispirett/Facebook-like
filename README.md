@@ -1,6 +1,6 @@
-# README
-
 # Facebook Like Project
+
+Live https://trini-social.herokuapp.com/
 
 ### Simple auth system build with rails
 
