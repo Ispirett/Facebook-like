@@ -11,9 +11,9 @@ Live https://trini-social.herokuapp.com/
 
 ### Requirements rails 6 and ruby 2.6.3
 ### Run Project
-* Clone Repo
-* Run these commands 
-*  ``` bundle install ```
+* Clone this Repo
+* Run these commands at your terminal * root folder.
+* ``` bundle install ```
 * ``` rake db:migrate ```
 * ``` rails server```
 
