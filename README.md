@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Facebook Like Project
 
-Things you may want to cover:
+### Simple auth system build with rails
 
-* Ruby version
+### Created By 
 
-* System dependencies
+[Isaac](https://github.com/ispirett)  and [Armando](https://github.com/SotoArmando)
 
-* Configuration
 
-* Database creation
+### Requirements rails 6 and ruby 2.6.3
+### Run Project
+* Clone Repo
+* Run these commands 
+*  ``` bundle install ```
+* ``` rake db:migrate ```
+* ``` rails server```
 
-* Database initialization
+### Images
+![image](fb_like.png)
 
-* How to run the test suite
+![image](fb_like_2.png)
 
-* Services (job queues, cache servers, search engines, etc.)
+![image](Like.png)
 
-* Deployment instructions
 
-* ...
+
+
+## Features 
