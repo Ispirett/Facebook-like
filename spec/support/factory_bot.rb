@@ -1,4 +1,4 @@
-
+require_relative 'posts_support'
 require 'capybara/rails'
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
@@ -6,4 +6,5 @@ RSpec.configure do |config|
   #config.include RequestSpecHelper, type: :request
   config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include Capybara::DSL
+  config.include PostSupport
 end
