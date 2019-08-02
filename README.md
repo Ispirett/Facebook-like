@@ -33,8 +33,8 @@ Live https://trini-social.herokuapp.com/
 
 - Publish Comments and Likes
 - Publish Post
-- Add Friends
-- Accept Friends
+- Push Friend Request
+- Accept Pending Friends Request
 - Single page app
 - Facebook auth 
 - Upload Gravatar
