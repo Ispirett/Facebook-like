@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.feature "Comments", type: :feature do
-  pending "add some scenarios (or delete) #{__FILE__}"
+  context "to be implemented" do
+
+  end
 end
