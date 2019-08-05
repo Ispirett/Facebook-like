@@ -19,11 +19,11 @@ Live https://trini-social.herokuapp.com/
 
 ### Images
 
-![image](fb_like.png)
+![image](docs/fb_like.png)
 
-![image](fb_like_2.png)
+![image](docs/fb_like_2.png)
 
-![image](Like.png)
+![image](docs/Like.png)
 
 
 
