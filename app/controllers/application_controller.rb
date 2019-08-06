@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
   include ApplicationHelper
   def users
-    user_friends = Friendship.confirmed_friends(current_user.id).distinct.pluck(:friend_id)
-    friend_users = Friendship.confirmed_friends(current_user.id).distinct.pluck(:user_id)
+    user_friends = Friendship.friendship_exist?(current_user.id, current_user.id).distinct.pluck(:friend_id)
+    friend_users = Friendship.friendship_exist?(current_user.id, current_user.id).distinct.pluck(:user_id)
     users_exclude = user_friends + friend_users + [current_user.id]
     @users = User.where.not(id:users_exclude)
 

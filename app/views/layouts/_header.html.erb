@@ -3,11 +3,14 @@
     <ul class="nav-links">
 
       <% if signed_in? %>
-      <li><span>Welcome</span> <%=current_user.username %> </li>
-      <li>  <span> Friends </span> (<%=@confirmed.count  %>) </li>
+      <li><span class="home-link"><%= link_to "Home", posts_path %>Welcome</span> <%=current_user.username %> </li>
+        <%- if @confirmed %>
+          <li>  <span> Friends </span> (<%=@confirmed.count  %>) </li>
+          <li>  <span> Posts</span>  on your feed (<%=@posts.count %>)</li>
+          <%end %>
 
-      <li>  <span> Posts</span>  on your feed (<%=@posts.count %>)</li>
-        <%end %>
+
+      <%end %>
       <input class="nav-search" type="text" placeholder="search friends">
 
     </ul>
@@ -15,9 +18,12 @@
     <%= render 'layouts/messages' %>
 
     <ul>
+      <% if signed_in? %>
       <li class="nav-links">
-        <%=link_to 'logout', destroy_user_session_path, method: :delete %>
+        <%=link_to 'Logout', destroy_user_session_path, method: :delete %>
+        <%= link_to 'Edit_user', edit_user_registration_path  %>
       </li>
+      <%end %>
     </ul>
   </nav>
 
