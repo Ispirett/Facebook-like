@@ -8,8 +8,9 @@ class User < ApplicationRecord
 
   has_many :friendships, foreign_key: :user_id, class_name: 'Friendship'
   has_many :friends, through: :friendships
-  has_many :posts
-  has_many :comments
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :comments, as: :commentable
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -20,15 +21,8 @@ class User < ApplicationRecord
     end
   end
 
-
-
-
-
   def username
     self.email.split('@')[0]
   end
-
-
-
-
+  
 end

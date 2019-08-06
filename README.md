@@ -1,24 +1,40 @@
-# README
+# Facebook Like Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live https://trini-social.herokuapp.com/
 
-Things you may want to cover:
+### Simple auth system build with rails
 
-* Ruby version
+### Created By 
 
-* System dependencies
+[Isaac](https://github.com/ispirett)  and [Armando](https://github.com/SotoArmando)
 
-* Configuration
 
-* Database creation
+### Requirements rails 6 and ruby 2.6.3
+### Run Project
+* Clone this Repo
+* Run these commands at your terminal * root folder.
+* ``` bundle install ```
+* ``` rake db:migrate ```
+* ``` rails server```
 
-* Database initialization
+### Images
 
-* How to run the test suite
+![image](docs/fb_like.png)
 
-* Services (job queues, cache servers, search engines, etc.)
+![image](docs/fb_like_2.png)
 
-* Deployment instructions
+![image](docs/Like.png)
 
-* ...
+
+
+
+## Features 
+
+
+- Publish Comments and Likes
+- Publish Post
+- Push Friend Request
+- Accept Pending Friends Request
+- Single page app
+- Facebook auth 
+- Upload Gravatar
