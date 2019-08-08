@@ -1,0 +1,208 @@
+
+<div class="wrapper">
+  <div class="col-one">
+    <section class="sec-one">
+      <h4>People you should follow</h4>
+      <ul class="users">
+        <% @users.each do |user| %>
+          <li class="user">
+            <%=user_gravatar(user) %>
+            <p><%=user.username %></p>
+
+            <%= button_to  friendships_path  :friendship => { :friend_id  =>  user.id } do %>
+              <i class=" icon fas fa-user-plus"></i>
+            <% end %>
+          </li>
+        <% end %>
+
+      </ul>
+    </section>
+
+
+
+
+  </div>
+  <!--  col one end -->
+
+
+
+
+  <!-- User section -->
+ <div class="two">
+    <section class="main-content">
+      <h4>Private messaging feature to be implemented. Currently shows ( <%= @friend.username %> 's)  posts</h4>
+
+      <h4> ( <%= @friend.username %>) has  <%= pluralize(@friend.friends.count + @friend.friend_senders.count, 'friend') %> </h4>
+      <div class="status-body">
+
+        </div>
+        </section>
+
+    <!-- POST SECTION -->
+    <article class="main-content-second">
+      <% @posts.each do |post| %>
+        <div class="posts">
+
+
+          <div class="post-header">
+            <%= user_gravatar(find_user(post.user_id), 'user-image') %>
+            <div class="post-details" >
+              <h4> <%= find_user(post.user_id).username %> </h4>
+              <small><%= time_ago_in_words(post.created_at) %> </small>
+            </div>
+          </div>
+
+          <div class="post-comment">
+            <p><%= post.content %></p>
+          </div>
+          <div class="post-image">
+            <% if post.image.attached? %>
+              <%= image_tag post.image %>
+
+            <%else %>
+              <img src="https://cdn.homesthetics.net/wp-content/uploads/2014/09/21-Snapshots-of-Abandoned-Places-That-Have-Been-Conquered-by-Nature-homesthetics-4.jpg" alt="Post Image">
+            <%end  %>
+          </div>
+
+          <!-- Comments likes -->
+          <div class="like-comment">
+            <%= form_for [ post, @like] do |f|%>
+              <%= f.hidden_field :post_id, :value => post.id  %>
+              <button class="comment-like-button" name="button" type="submit">(<%= post.likes.count%>) <i class="fas fa-heartbeat fa-1x love-icon"></i> Love</button>
+              <button class="comment-comment-button" id="comment-button" type="button" onclick="commentsShow(<%= post.id%> )">
+                <i class="far fa-comment fa-1x comment-icon"> </i>
+                (<%= post.comments.count %>) Comments</button>
+            <% end %>
+
+          </div>
+          <!-- Comments -->
+          <div class="comments" id="comments-<%= post.id %>">
+
+            <ul class="comments-list">
+              <% post.comments.each do |comment| %>
+                <li class="comment">
+                  <%= user_gravatar(find_user(comment.user_id), 'comment-user-image') %>
+                  <!-- TODO -->
+                  <span>(<%= find_user(comment.user_id).username %>) <%=  comment.body %></span>
+                </li>
+              <%end %>
+            </ul>
+
+            <!-- Post comments -->
+
+            <div class="user-comment">
+              <%= user_gravatar(current_user, 'user-image') %>
+              <%= form_for([post, @comment]) do |f|  %>
+                <%= f.hidden_field :commentable_id , :value => post.id  %>
+                <%= f.text_field :body, class: 'user-comment-box', placeholder:"Leave a Comment" %>
+                <%= f.button 'Comment', class:'comment-button'  %>
+              <% end %>
+
+            </div>
+          </div>
+
+        </div>
+      <% end %>
+    </article>
+
+  </div>
+
+
+  <!-- Friends -->
+ <!-- <div class="three">
+    <h4 class="section-title">Friends</h4>
+
+    <div class="friends">
+      <% @confirmed.each do |friend| %>
+        <div class="friends-list">
+          <%= user_gravatar(find_user(friend.friend_id), 'friend-image') %>
+
+          <div class="friend">
+            <% if friend.friend_id == current_user.id  %>
+              <h4>
+                <%= find_user(friend.friend_sender_id).username %>
+                <a href=" <% user_path(friend.friend_id) %>">
+                  <i class=" icon fas fa-user-plus" aria-hidden="true"></i>
+                </a>
+              </h4>
+              <small>
+                <%=  time_ago_in_words(find_user(friend.friend_sender_id).updated_at) %>
+              </small>
+            <%elsif friend.friend_sender_id == current_user.id   %>
+              <h4>
+                <%= find_user(friend.friend_id).username %>
+                <a href=" <%= user_path(friend.friend_id) %>">
+                  <i class=" icon fas fa-user-plus" aria-hidden="true"></i>
+                </a>
+              </h4>
+              <small>
+                <%=  time_ago_in_words(find_user(friend.friend_id).updated_at) %>
+              </small>
+            <%end %>
+          </div>
+        </div>
+      <% end %>
+      <div class="friends-list">
+
+        <img  class='friend-image'  src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="image">
+        <div class="friend">
+          <h4>
+            Kenton Wright
+          </h4>
+          <small>
+            two days ago
+          </small>
+        </div>
+      </div>
+      <div class="friends-list">
+        <img  class='friend-image'  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQivdnScHPNVTnxKwU2dggmOAwzB_kER3XgL1JqVrnbvWIQoDzXA" alt="image">
+        <div class="friend">
+          <h4>
+            Kenton Wright
+          </h4>
+          <small>
+            two days ago
+          </small>
+        </div>
+      </div>
+      <div class="friends-list">
+        <img  class='friend-image'  src="https://23asb.itocd.net/www/images/girl/1218401-1218600/66f8f51f-8513-4570-89f0-b72dc660d139.jpg" alt="image">
+        <div class="friend">
+          <h4>
+            Kenton Wright
+          </h4>
+          <small>
+            two days ago
+          </small>
+        </div>
+      </div>
+      <div class="friends-list">
+        <img  class='friend-image'  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufY5IYrhBfNC1JXMHvt0qYZt0iOsfLQdZz4XMA3hYoN0lZ6MR" alt="image">
+        <div class="friend">
+          <h4>
+            Kenton Wright
+          </h4>
+          <small>
+            two days ago
+          </small>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
+</div>
+<script>
+    function commentsShow(postID, e) {
+        let comments = document.getElementById(`comments-${postID}`);
+
+        if (comments.style.display === 'block'){
+            comments.style.display = 'none';
+        }
+        else{
+            comments.style.display = 'block';
+        }
+
+
+    }
+
+</script>

@@ -2,14 +2,14 @@ class ApplicationController < ActionController::Base
   include ApplicationHelper
   def users
     user_friends = Friendship.friendship_exist?(current_user.id, current_user.id).distinct.pluck(:friend_id)
-    friend_users = Friendship.friendship_exist?(current_user.id, current_user.id).distinct.pluck(:user_id)
+    friend_users = Friendship.friendship_exist?(current_user.id, current_user.id).distinct.pluck(:friend_sender_id)
     users_exclude = user_friends + friend_users + [current_user.id]
     @users = User.where.not(id:users_exclude)
 
   end
 
   def friend_status(user)
-    @friend_requests_sent = current_user.friendships.friend_requests_sent
+    @friend_requests_sent = Friendship.friend_requests_sent(user)
     @confirmed = Friendship.confirmed_friends(current_user.id)
     @awaiting_confirmation = Friendship.awaiting_response(user)
 

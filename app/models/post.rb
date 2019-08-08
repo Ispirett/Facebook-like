@@ -8,9 +8,9 @@ class Post < ApplicationRecord
 
   def self.user_and_friends(user)
     user_friends_posts = Post.joins('INNER JOIN friendships  ON posts.user_id = friendships.friend_id')
-        .where('friendships.status = ? AND friendships.user_id = ?','Confirmed',user.id).
+        .where('friendships.status = ? AND friendships.friend_sender_id = ?','Confirmed',user.id).
         order(created_at: :desc)
-    friends_user_posts = Post.joins('INNER JOIN friendships  ON posts.user_id = friendships.user_id')
+    friends_user_posts = Post.joins('INNER JOIN friendships  ON posts.user_id = friendships.friend_sender_id')
                              .where('friendships.status = ? AND friendships.friend_id = ?','Confirmed',user.id).
         order(created_at: :desc)
     user_posts = user.posts
