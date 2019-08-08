@@ -5,7 +5,6 @@ ruby '2.6.3'
 gem 'devise'
 gem 'omniauth-facebook'
 gem "aws-sdk-s3", require: false
-gem 'rails-controller-testing'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0.rc1'
 # Use postgresql as the database for Active Record
@@ -43,6 +42,7 @@ end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'rspec-rails'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
@@ -52,10 +52,19 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  # gaurd and others
+  gem 'rails-controller-testing'
+  gem "minitest-rails", github: "blowmage/minitest-rails"
+  gem 'minitest-reporters'
+  gem 'guard'
+  gem 'guard-minitest'
 end
 
 
