@@ -20,17 +20,19 @@ RSpec.describe Like, type: :model do
       user.save
       like.save
       like2.save
+      post.likes << like
       post.save
       post2.save
       
     end
 
-    it 'like has respect post' do
-       expect(like.post_id).not_to eq(nil)
+    it 'should increment like' do
+      expect(post.likes.length).to eq(1)
     end
 
-    it 'like has respect user' do
-      expect(like.user_id).not_to eq(nil)
+    it 'should decrement like' do
+      post.likes = []
+      expect(post.likes.length).to eq(0)
     end
   end
 
