@@ -1,5 +1,6 @@
 FactoryBot.define do
 
+
     factory :post, class: 'Post' do
         
         user_id { 1 }
@@ -14,3 +15,4 @@ FactoryBot.define do
         updated_at { Time.new }
     end
   end
+

@@ -6,9 +6,14 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: %i[facebook]
 
-  has_many :friendships, foreign_key: :user_id, class_name: 'Friendship'
+  has_many :friendships, foreign_key: :friend_sender_id, class_name: 'Friendship'
   has_many :friends, through: :friendships
-  has_many :posts
+  has_many :friend_requests, foreign_key: :friend_id, class_name: 'Friendship'
+  has_many :friend_senders, through: :friend_requests
+
+
+  has_many :posts, dependent: :destroy
+  has_many :likes, dependent: :destroy
   has_many :comments
 
   def self.from_omniauth(auth)

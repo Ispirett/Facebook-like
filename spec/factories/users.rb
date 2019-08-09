@@ -7,7 +7,7 @@ FactoryBot.define do
   end
 
   factory :user_two, class: 'User' do
-    
+
     email { 'n@gamil.com' }
     password{12345678}
   end

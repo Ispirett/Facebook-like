@@ -24,7 +24,7 @@
         <% @awaiting_confirmation.each do |friend| %>
         <li class="user">
           <img src="https://www.w3schools.com/howto/img_avatar.png" alt="user">
-          <p><%= find_user(friend.user_id).username %></p>
+          <p><%= find_user(friend.friend_sender_id).username %></p>
           <span>(<%= friend.status%>)</span>
           <%= button_to  accept_friend_path(friend.id),  params: {:friendship => { :friend_id  =>  friend.friend_id }}, method: :patch do %>
             <i class=" icon-pink fas fa-user-plus"></i>
@@ -169,14 +169,20 @@
         <div class="friend">
           <% if friend.friend_id == current_user.id  %>
           <h4>
-            <%= find_user(friend.user_id).username %>
+             <%= find_user(friend.friend_sender_id).username %>
+            <a href=" <% user_path(friend.friend_id) %>">
+              <i class=" icon fas fa-user-plus" aria-hidden="true"></i>
+            </a>
           </h4>
             <small>
-              <%=  time_ago_in_words(find_user(friend.user_id).updated_at) %>
+              <%=  time_ago_in_words(find_user(friend.friend_sender_id).updated_at) %>
             </small>
-            <%elsif friend.user_id == current_user.id   %>
+            <%elsif friend.friend_sender_id == current_user.id   %>
             <h4>
-              <%= find_user(friend.friend_id).username %>
+               <%= find_user(friend.friend_id).username %>
+              <a href=" <%= user_path(friend.friend_id) %>">
+                <i class=" icon fas fa-user-plus" aria-hidden="true"></i>
+              </a>
             </h4>
             <small>
               <%=  time_ago_in_words(find_user(friend.friend_id).updated_at) %>
