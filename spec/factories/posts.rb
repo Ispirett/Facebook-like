@@ -1,12 +1,18 @@
 FactoryBot.define do
-  factory :post do
-    content {'cool content'}
 
+
+    factory :post, class: 'Post' do
+        
+        user_id { 1 }
+        created_at { Time.new }
+        updated_at { Time.new }
+    end
+  
+    factory :post_two, class: 'Post' do
+        
+        user_id { 1 }
+        created_at { Time.new }
+        updated_at { Time.new }
+    end
   end
 
-  factory :post_two, class: 'Post' do
-    content {'cool content yes'}
-
-  end
-
-end
