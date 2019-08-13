@@ -13,6 +13,7 @@ RSpec.describe Post, type: :model do
 
     it 'should be a valid post' do
        second_post.user = user
+       second_post.content = "Hello world"
       expect(second_post.valid?).to eq(true)
     end
 

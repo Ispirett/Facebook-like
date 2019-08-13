@@ -8,18 +8,18 @@ RSpec.describe Friendship, type: :model do
 
 context 'Validations' do
 
-     it 'user_id and and friend_id should not be blank' do
+     it 'friend_sender_id and and friend_id should not be blank' do
        expect(friendship.valid?).to eq false
      end
 
-     it 'if user_id and and friend_id exist should save' do
-       friendship.user = user
+     it 'if friend_sender_id and and friend_id exist should save' do
+       friendship.friend_sender = user
        friendship.friend = user_two
        expect(friendship.valid?).to eq true
      end
 
      it 'New saved friendships should have set status to Pending' do
-       friendship.user = user
+       friendship.friend_sender = user
        friendship.friend = user_two
        friendship.status = nil
        friendship.save
