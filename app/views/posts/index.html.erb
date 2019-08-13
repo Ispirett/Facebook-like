@@ -170,7 +170,7 @@
           <% if friend.friend_id == current_user.id  %>
           <h4>
              <%= find_user(friend.friend_sender_id).username %>
-            <a href=" <% user_path(friend.friend_id) %>">
+            <a href=" <%= user_path(friend.friend_sender_id) %>">
               <i class=" icon fas fa-user-plus" aria-hidden="true"></i>
             </a>
           </h4>

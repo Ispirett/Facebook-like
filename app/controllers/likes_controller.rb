@@ -10,10 +10,10 @@ class LikesController < ApplicationController
     else
       if @like.save
         flash[:success] = 'you just liked this comment'
-        redirect_to root_path
+        redirect_to request.referrer
       else
         flash[:danger] = "something went wrong"
-        redirect_to root_path
+        redirect_to :back
       end
     end
 

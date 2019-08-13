@@ -32,7 +32,7 @@
     <section class="main-content">
       <h4>Private messaging feature to be implemented. Currently shows ( <%= @friend.username %> 's)  posts</h4>
 
-      <h4> ( <%= @friend.username %>) has  <%= pluralize(@friend.friends.count + @friend.friend_senders.count, 'friend') %> </h4>
+      <h4> ( <%= @friend.username %>) has  <%= pluralize(@friend_count.count, 'friend') %> </h4>
       <div class="status-body">
 
         </div>
