@@ -21,11 +21,11 @@ RSpec.feature "Posts", type: :feature do
 
    it 'should create a posts ' do
      sign_in user
-
+      post.content = "this is working"
      visit posts_path
      fill_in 'post_content', with: post.content
      click_button 'commit'
-     expect(page).to have_text post.content
+     expect(page).to have_content 'this is working'
 
     end
   end

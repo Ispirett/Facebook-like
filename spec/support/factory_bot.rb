@@ -1,6 +1,6 @@
 require_relative 'posts_support'
-
 require_relative 'likes_support'
+require_relative 'comment_support'
 
 require 'capybara/rails'
 RSpec.configure do |config|
@@ -10,7 +10,7 @@ RSpec.configure do |config|
   config.include Devise::Test::IntegrationHelpers, type: :feature
   config.include Capybara::DSL
   config.include PostSupport
-
   config.include LikeSupport
+  config.include CommentSupport
 
 end

@@ -4,6 +4,7 @@ FactoryBot.define do
     factory :post, class: 'Post' do
         
         user_id { 1 }
+        content {"this is working"}
         created_at { Time.new }
         updated_at { Time.new }
     end

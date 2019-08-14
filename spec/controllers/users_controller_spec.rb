@@ -1,12 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
-
-  describe "GET #show" do
-    it "returns http success" do
-      get :show
-      expect(response).to have_http_status(:success)
-    end
-  end
+  # let(:user) {create(:user)}
+  #
+  # describe "GET #show" do
+  #   it "responds successfully" do
+  #     #sign_in(user)
+  #     get 'user/:id'
+  #     expect(response).to be_success
+  #   end
+  # end
 
 end
