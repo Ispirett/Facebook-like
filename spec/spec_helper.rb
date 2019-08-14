@@ -95,4 +95,4 @@ RSpec.configure do |config|
 =end
 end
 require 'capybara'
-Capybara.default_driver = :selenium_chrome
+#Capybara.default_driver = :selenium_chrome

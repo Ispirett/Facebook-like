@@ -117,7 +117,7 @@
         <div class="like-comment">
           <%= form_for [ post, @like] do |f|%>
            <%= f.hidden_field :post_id, :value => post.id  %>
-          <button class="comment-like-button" name="button" type="submit">(<%= post.likes.count%>) <i class="fas fa-heartbeat fa-1x love-icon"></i> Love</button>
+          <button class="comment-like-button" name="button" type="submit" id="like-button">(<%= post.likes.count%>) <i class="fas fa-heartbeat fa-1x love-icon"></i> Love</button>
             <button class="comment-comment-button" id="comment-button" type="button" onclick="commentsShow(<%= post.id%> )">
               <i class="far fa-comment fa-1x comment-icon"> </i>
              (<%= post.comments.count %>) Comments</button>

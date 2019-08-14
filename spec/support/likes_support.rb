@@ -1,7 +1,6 @@
 
 module LikeSupport
-  def create_post(post)
-    # fill_in 'post_content', with: post.content
-    click_button 'button'
+  def like_a_post
+    click_button 'like-button'
   end
 end

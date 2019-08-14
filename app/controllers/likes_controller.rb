@@ -9,7 +9,7 @@ class LikesController < ApplicationController
       destroy
     else
       if @like.save
-        flash[:success] = 'you just liked this comment'
+        flash[:success] = 'you just liked this post'
         redirect_to request.referrer
       else
         flash[:danger] = "something went wrong"
