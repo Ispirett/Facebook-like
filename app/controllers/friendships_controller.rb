@@ -1,17 +1,9 @@
 class FriendshipsController < ApplicationController
 
-  # Create new friend shuip
-  # Add user_id and friend id
-  # make user is not all so a friend of current user
   def create
     friend_params = params[:friendship][:friend_id]
-    friendship_exist = Friendship.friendship_exist?(current_user.id,friend_params)
-    @friendship = current_user.friends << find_user(friend_params)
 
-    if friendship_exist.exists?
-      flash[:success] = "This person has already sent you a friend request"
-      redirect_to root_path
-    else
+      @friendship = Friendship.new(friend_id: friend_params, friend_sender_id:  current_user.id)
     if @friendship.save
       flash[:success] = "friend request sent too #{find_user(@friendship.friend_id).username}"
       redirect_to root_path
@@ -19,10 +11,8 @@ class FriendshipsController < ApplicationController
       flash[:danger] = "User could not be added #{@friendship.errors.full_messages}"
       redirect_to root_path
     end
-
-    end
-
   end
+
   def update
     flash[:success] = 'accept_friends work'
     redirect_to root_path

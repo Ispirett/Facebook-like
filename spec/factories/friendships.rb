@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :friendship do
-    user {nil}
+    friend_sender {nil}
     friend {nil}
     status {'Pending'}
   end

@@ -3,7 +3,8 @@
     <ul class="nav-links">
 
       <% if signed_in? %>
-      <li><span class="home-link"><%= link_to "Home", posts_path %>Welcome</span> <%=current_user.username %> </li>
+      <li><span class="home-link"><%= link_to "Home", posts_path %> <%= link_to 'Welcome', user_path(current_user)  %>
+      </span> <%=current_user.username %> </li>
         <%- if @confirmed %>
           <li>  <span> Friends </span> (<%=@confirmed.count  %>) </li>
           <li>  <span> Posts</span>  on your feed (<%=@posts.count %>)</li>

@@ -17,6 +17,7 @@ RSpec.describe User, type: :model do
       user.password = nil
       expect(user.valid?).to eq false
     end
+
   end
 
   context 'tests  user scopes' do
