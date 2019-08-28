@@ -31,4 +31,7 @@ yarn-debug.log*
 .yarn-integrity
 .idea
 .idea/workspace.xml
+.vscode
 
+# Ignore Spring files.
+/spring/*.pid

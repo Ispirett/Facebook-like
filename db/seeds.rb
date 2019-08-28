@@ -13,15 +13,15 @@ User.create(email:'n@gmail.com', password:12345678)
 
 require 'faker'
 
-# 5.times do
-# User.create(email:"#{Faker::Name.name}@gmail.com", password:12345678)
-# end
+5.times do
+User.create(email:"#{Faker::Name.name}@gmail.com", password:12345678)
+end
 
-#posts
-# 5.times do
-#   User.first.posts.build(content:Faker::Movies::BackToTheFuture.quote).save
-#   User.second.posts.build(content:Faker::Movies::BackToTheFuture.quote).save
-# end
+
+5.times do
+  User.first.posts.build(content:Faker::Movies::BackToTheFuture.quote).save
+  User.second.posts.build(content:Faker::Movies::BackToTheFuture.quote).save
+end
 
  5.times do
   User.create( email:Faker::Internet.email, password:12345678)

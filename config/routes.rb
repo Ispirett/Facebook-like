@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root 'posts#index'
   #devise_for :users
   devise_for :users,
@@ -8,6 +9,7 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
     resources :likes, only:  [:create, :destroy]
   end
-  resource :friendships, only: [:create, :update]
+  resources :friendships, only: [:create, :update]
+  resources :users, only: [:show]
   patch 'accept_friend/:id', to: 'friendships#accept_friend', as: 'accept_friend'
 end

@@ -12,6 +12,12 @@ header{
     list-style: none;
   }
 }
+
+.home-link{
+  &:hover{
+    cursor: pointer;
+  }
+}
 .nav{
   box-shadow: 0 7px 14px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0;
   padding-left: 0;
@@ -52,7 +58,7 @@ header{
 }
 
 .nav-search{
-  width: 30em !important;
+  width: 20em !important;
   border-radius: 1em !important;
   outline: none !important;
   font-size: 1em !important;
